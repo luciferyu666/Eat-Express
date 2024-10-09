@@ -1,0 +1,77 @@
+/* src/components/Homepage.css */
+
+/* 基本頁面樣式，設置全局字體 */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* 標題樣式 */
+h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* 按鈕樣式，這裡可以加上更具體的樣式控制 */
+.role-btn {
+  transition: background-color 0.3s ease; /* 按鈕的背景顏色變化動畫 */
+  width: 16rem; /* 設置按鈕寬度 */
+  padding: 1rem; /* 設置按鈕內部填充 */
+  border-radius: 0.5rem; /* 設置圓角 */
+  font-size: 1.25rem; /* 字體大小 */
+  font-weight: bold; /* 字體加粗 */
+  cursor: pointer; /* 鼠標變為手型 */
+  margin-bottom: 1rem; /* 按鈕之間的間隔 */
+}
+
+/* 用戶按鈕顏色 */
+.user-btn {
+  background-color: #48bb78; /* 綠色 */
+  color: white;
+}
+
+.user-btn:hover {
+  background-color: #38a169; /* 深綠色，hover 時的效果 */
+}
+
+/* 餐廳按鈕顏色 */
+.restaurant-btn {
+  background-color: #ecc94b; /* 黃色 */
+  color: white;
+}
+
+.restaurant-btn:hover {
+  background-color: #d69e2e; /* 深黃色，hover 時的效果 */
+}
+
+/* 外送員按鈕顏色 */
+.delivery-btn {
+  background-color: #667eea; /* 靛色 */
+  color: white;
+}
+
+.delivery-btn:hover {
+  background-color: #5a67d8; /* 深靛色，hover 時的效果 */
+}
+
+/* 管理員按鈕顏色 */
+.admin-btn {
+  background-color: #f56565; /* 紅色 */
+  color: white;
+}
+
+.admin-btn:hover {
+  background-color: #e53e3e; /* 深紅色，hover 時的效果 */
+}
+
+/* 頁面容器樣式 */
+.homepage-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.role-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
