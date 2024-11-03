@@ -1,0 +1,50 @@
+# 根目錄 .gitignore
+
+# 前端
+/frontend-project/node_modules
+/frontend-project/.pnp
+/frontend-project/.pnp.js
+/frontend-project/coverage/
+/frontend-project/build/
+frontend-project/.DS_Store
+frontend-project/.env.local
+frontend-project/.env.development.local
+frontend-project/.env.test.local
+frontend-project/.env.production.local
+frontend-project/npm-debug.log*
+frontend-project/yarn-debug.log*
+frontend-project/yarn-error.log*
+
+# 後端
+/backend-project/node_modules
+/backend-project/.env
+/backend-project/.env.example
+/backend-project/*.log
+/backend-project/logs/
+backend-project/coverage/
+backend-project/dist/
+backend-project/build/
+backend-project/.DS_Store
+backend-project/Thumbs.db
+backend-project/*.tsbuildinfo
+backend-project/.idea/
+backend-project/.vscode/
+backend-project/tmp/
+backend-project/temp/
+
+# 通用
+node_modules/
+.pnp
+.pnp.js
+coverage/
+build/
+dist/
+.DS_Store
+Thumbs.db
+*.log
+logs/
+*.tsbuildinfo
+.idea/
+.vscode/
+tmp/
+temp/

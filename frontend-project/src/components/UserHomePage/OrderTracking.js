@@ -1,3 +1,4 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/UserHomePage/OrderTracking.js
 
 import React, { useEffect, useState } from 'react';
@@ -7,7 +8,7 @@ import {
   Polyline,
   useJsApiLoader,
 } from '@react-google-maps/api';
-import { joinOrderRoom, leaveOrderRoom, getSocket } from '../../socket';
+import { joinOrderRoom, leaveOrderRoom, getSocket } from '@utils/socket';
 
 const OrderTracking = ({ order, onClose }) => {
   const [deliveryLocation, setDeliveryLocation] = useState(
@@ -55,7 +56,7 @@ const OrderTracking = ({ order, onClose }) => {
           lat: deliveryLocation.lat,
           lng: deliveryLocation.lng,
         }
-      : { lat: 25.0330, lng: 121.5654 } // 默認位置
+      : { lat: 25.033, lng: 121.5654 } // 默認位置
     : order.restaurantLocation &&
       order.restaurantLocation.lat &&
       order.restaurantLocation.lng
@@ -63,7 +64,7 @@ const OrderTracking = ({ order, onClose }) => {
         lat: order.restaurantLocation.lat,
         lng: order.restaurantLocation.lng,
       }
-    : { lat: 25.0330, lng: 121.5654 }; // 默認位置
+    : { lat: 25.033, lng: 121.5654 }; // 默認位置
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">

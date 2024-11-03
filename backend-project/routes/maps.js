@@ -4,6 +4,7 @@ const googleMapsClient = require('../services/maps');
 
 // 地理編碼 API 路由
 router.post('/geocode', (req, res) => {
+  console.log('处理 POST /geocode 请求');
   const { address } = req.body;
 
   googleMapsClient.geocode({ address })

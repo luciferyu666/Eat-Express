@@ -1,8 +1,10 @@
-// routes/reportRoutes.js
+// backend-project/routes/reportRoutes.js
+
 const express = require('express');
 const router = express.Router();
 const moment = require('moment');  // 用於處理時間範圍的第三方庫
 const { generateCSV, generateExcel } = require('../utils/exportUtils');  // 假設已經有一個導出工具
+const { verifyToken } = require('../controllers/userController'); // 引入 verifyToken 中間件
 
 // 模擬數據源
 const reportsData = {
@@ -22,14 +24,26 @@ const reportsData = {
     totalOrders: 500,
     totalRevenue: 20000,
     averageRating: 4.5
-  }
+  },
+  dailySales: [
+    { date: '2024-04-01', total: 1000 },
+    { date: '2024-04-02', total: 1500 },
+    { date: '2024-04-03', total: 1200 },
+    // 更多數據...
+  ],
+  topDishes: [
+    { name: '披薩', sales: 300 },
+    { name: '漢堡', sales: 250 },
+    // 更多數據...
+  ]
 };
 
 // 獲取系統運營報表 API
-router.get('/operations', (req, res) => {
+router.get('/operation', verifyToken, (req, res) => {
+  console.log('处理 GET /operation 请求');
   const { range, startDate, endDate } = req.query;
 
-  // 模擬數據邏輯可以根據時間範圍進行數據處理
+  // 根據時間範圍處理數據（模擬）
   const report = {
     totalOrders: reportsData.totalOrders,
     totalRevenue: reportsData.totalRevenue,
@@ -40,8 +54,9 @@ router.get('/operations', (req, res) => {
   res.json(report);
 });
 
-// 獲取用戶行為分析 API（修改名稱為 `/user-behavior`）
-router.get('/user-behavior', (req, res) => {
+// 獲取用戶行為分析 API
+router.get('/user-behavior', verifyToken, (req, res) => {
+  console.log('处理 GET /user-behavior 请求');
   const { range, startDate, endDate } = req.query;
 
   // 模擬邏輯處理
@@ -55,7 +70,8 @@ router.get('/user-behavior', (req, res) => {
 });
 
 // 獲取餐廳表現分析 API
-router.get('/restaurant-performance', (req, res) => {
+router.get('/restaurant-performance', verifyToken, (req, res) => {
+  console.log('处理 GET /restaurant-performance 请求');
   const { range, startDate, endDate } = req.query;
 
   // 模擬邏輯處理
@@ -64,24 +80,31 @@ router.get('/restaurant-performance', (req, res) => {
   res.json(report);
 });
 
-// 獲取系統運營報告 API（來自示例代碼）
-router.get('/system-operation', (req, res) => {
-  // 這裡應包含返回系統運營報告的邏輯
-  res.status(200).json({
-    message: 'System operation report data',
-    // 可以返回一些模擬數據來測試
-    totalOrders: 100,
-    activeUsers: 50,
-    totalRevenue: 5000,
-  });
+// 新增獲取餐廳銷售報表 API
+router.get('/restaurant/sale', verifyToken, (req, res) => {
+  console.log('处理 GET /restaurant/sale 请求');
+  const { range, startDate, endDate } = req.query;
+
+  // 根據時間範圍處理數據（模擬）
+  const report = {
+    dailySales: reportsData.dailySales,
+    topDishes: reportsData.topDishes,
+  };
+
+  res.json(report);
 });
 
 // 報表導出 API
-router.get('/export', async (req, res) => {
+router.get('/export', verifyToken, async (req, res) => {
+  console.log('处理 GET /export 请求');
   const { range, format, startDate, endDate } = req.query;
 
   // 根據參數導出相應格式的報表
   try {
+    console.log("Entering routes\\reportRoutes.js");
+    console.log("Entering routes\\reportRoutes.js");
+    console.log("Entering routes\\reportRoutes.js");
+    console.log("Entering routes\\reportRoutes.js");
     let fileUrl;
     if (format === 'csv') {
       fileUrl = await generateCSV(reportsData);

@@ -1,7 +1,8 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/OperationalStatusMonitor.js
 
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axiosInstance from 'axios';
 
 const OperationalStatusMonitor = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -12,11 +13,12 @@ const OperationalStatusMonitor = () => {
     // 獲取餐廳、外送員和用戶的活動數據
     const fetchOperationalData = async () => {
       try {
-        const [restaurantsRes, deliveryPersonsRes, usersRes] = await Promise.all([
-          axios.get('/api/restaurants/active'),
-          axios.get('/api/delivery-persons/active'),
-          axios.get('/api/users/active'),
-        ]);
+        const [restaurantsRes, deliveryPersonsRes, usersRes] =
+          await Promise.all([
+            axiosInstance.get("/restaurants/active"),
+            axiosInstance.get("/delivery-person/active"),
+            axiosInstance.get("/users/active"),
+          ]);
         setRestaurants(restaurantsRes.data);
         setDeliveryPersons(deliveryPersonsRes.data);
         setUsers(usersRes.data);

@@ -10,6 +10,10 @@ const { getSystemReport, getUserBehaviorReport, getRestaurantPerformanceReport }
 
 const generateSystemReport = async (req, res) => {
   try {
+    console.log("Entering controllers\\reportController.js");
+    console.log("Entering controllers\\reportController.js");
+    console.log("Entering controllers\\reportController.js");
+    console.log("Entering controllers\\reportController.js");
     const report = await getSystemReport();
     res.json(report);
   } catch (error) {
@@ -20,6 +24,10 @@ const generateSystemReport = async (req, res) => {
 
 const generateUserBehaviorReport = async (req, res) => {
   try {
+    console.log("Entering controllers\\reportController.js");
+    console.log("Entering controllers\\reportController.js");
+    console.log("Entering controllers\\reportController.js");
+    console.log("Entering controllers\\reportController.js");
     const report = await getUserBehaviorReport();
     res.json(report);
   } catch (error) {
@@ -30,6 +38,10 @@ const generateUserBehaviorReport = async (req, res) => {
 
 const generateRestaurantPerformanceReport = async (req, res) => {
   try {
+    console.log("Entering controllers\\reportController.js");
+    console.log("Entering controllers\\reportController.js");
+    console.log("Entering controllers\\reportController.js");
+    console.log("Entering controllers\\reportController.js");
     const report = await getRestaurantPerformanceReport();
     res.json(report);
   } catch (error) {
@@ -41,6 +53,10 @@ const generateRestaurantPerformanceReport = async (req, res) => {
 const exportReport = async (req, res) => {
   const { type } = req.params;
   try {
+    console.log("Entering controllers\\reportController.js");
+    console.log("Entering controllers\\reportController.js");
+    console.log("Entering controllers\\reportController.js");
+    console.log("Entering controllers\\reportController.js");
     let data;
     switch (type) {
       case 'system':
@@ -53,6 +69,10 @@ const exportReport = async (req, res) => {
         data = await getRestaurantPerformanceReport();
         break;
       default:
+        console.log("Exiting controllers\\reportController.js with status code");
+        console.log("Exiting controllers\\reportController.js with status code");
+        console.log("Exiting controllers\\reportController.js with status code");
+        console.log("Exiting controllers\\reportController.js with status code");
         return res.status(400).json({ error: '無效的報表類型' });
     }
 

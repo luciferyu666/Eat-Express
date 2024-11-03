@@ -1,6 +1,7 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/OrderForm.js
 import React, { useState } from 'react';
-import axios from 'axios';
+import axiosInstance from 'axios';
 
 const OrderForm = () => {
   const [restaurantId, setRestaurantId] = useState('');
@@ -12,7 +13,10 @@ const OrderForm = () => {
 
   // 計算總價
   const calculateTotalPrice = () => {
-    const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const total = items.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
     setTotalPrice(total);
   };
 
@@ -40,7 +44,7 @@ const OrderForm = () => {
     };
 
     try {
-      const response = await axios.post('/api/orders/create', orderData);
+      const response = await axiosInstance.post("/orders/create", orderData);
       setOrderStatus(`訂單創建成功，訂單編號: ${response.data._id}`);
       // 重置表單
       setRestaurantId('');
@@ -116,7 +120,9 @@ const OrderForm = () => {
               />
             </div>
           ))}
-          <button type="button" onClick={addItem}>添加菜品</button>
+          <button type="button" onClick={addItem}>
+            添加菜品
+          </button>
         </div>
 
         <div>

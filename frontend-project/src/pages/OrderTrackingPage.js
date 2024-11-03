@@ -1,18 +1,19 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import socket from '../socket';  // 引入 WebSocket 配置
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';  // 用於展示外送員實時位置
+import socket from '@utils/socket'; // 引入 WebSocket 配置
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api'; // 用於展示外送員實時位置
 
 const OrderTrackingPage = ({ orderId }) => {
-  const [orderStatus, setOrderStatus] = useState('');       // 訂單狀態
-  const [deliveryLocation, setDeliveryLocation] = useState(null);  // 外送員位置
-  const [orderDetails, setOrderDetails] = useState({});     // 訂單詳細信息
+  const [orderStatus, setOrderStatus] = useState(''); // 訂單狀態
+  const [deliveryLocation, setDeliveryLocation] = useState(null); // 外送員位置
+  const [orderDetails, setOrderDetails] = useState({}); // 訂單詳細信息
 
   // 從後端獲取訂單詳情
   useEffect(() => {
     const fetchOrderDetails = async () => {
       try {
-        const response = await axios.get(`/api/orders/${orderId}`);
+        const response = await axios.get(`/orders/${orderId}`);
         setOrderDetails(response.data);
       } catch (error) {
         console.error('Error fetching order details:', error);
@@ -28,7 +29,7 @@ const OrderTrackingPage = ({ orderId }) => {
       if (data.orderId === orderId) {
         setOrderStatus(data.status);
         if (data.deliveryLocation) {
-          setDeliveryLocation(data.deliveryLocation);  // 更新外送員實時位置
+          setDeliveryLocation(data.deliveryLocation); // 更新外送員實時位置
         }
       }
     };
@@ -84,9 +85,15 @@ const OrderTrackingPage = ({ orderId }) => {
         <h3>訂單詳情</h3>
         <p>訂單號：{orderDetails.id}</p>
         <p>餐廳：{orderDetails.restaurantName}</p>
-        <p>菜品：{orderDetails.items && orderDetails.items.map(item => (
-          <span key={item.id}>{item.name} - {item.quantity}份</span>
-        ))}</p>
+        <p>
+          菜品：
+          {orderDetails.items &&
+            orderDetails.items.map((item) => (
+              <span key={item.id}>
+                {item.name} - {item.quantity}份
+              </span>
+            ))}
+        </p>
       </div>
     </div>
   );

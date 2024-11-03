@@ -1,7 +1,8 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/UserHomePage/MenuBrowser.js
 
 import React, { useEffect, useState } from 'react';
-import axios from '../../utils/api';
+import axios from '@utils/api';
 
 const MenuBrowser = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -109,7 +110,9 @@ const MenuBrowser = () => {
   useEffect(() => {
     if (selectedRestaurant) {
       // 根據選擇的餐廳獲取菜單數據
-      const restaurantMenu = mockMenu.find(menu => menu.restaurantId === selectedRestaurant.id);
+      const restaurantMenu = mockMenu.find(
+        (menu) => menu.restaurantId === selectedRestaurant.id
+      );
       setMenu(restaurantMenu ? restaurantMenu.categories : []);
     }
   }, [selectedRestaurant]);
@@ -119,7 +122,9 @@ const MenuBrowser = () => {
     if (existingItem) {
       setCart(
         cart.map((item) =>
-          item.dish.id === dish.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.dish.id === dish.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
         )
       );
     } else {
@@ -137,9 +142,7 @@ const MenuBrowser = () => {
 
   const handleNotesChange = (dishId, notes) => {
     setCart(
-      cart.map((item) =>
-        item.dish.id === dishId ? { ...item, notes } : item
-      )
+      cart.map((item) => (item.dish.id === dishId ? { ...item, notes } : item))
     );
   };
 
@@ -157,7 +160,7 @@ const MenuBrowser = () => {
     // 假設我們將訂單發送到後端
     const orderData = {
       restaurantId: selectedRestaurant.id,
-      items: cart.map(item => ({
+      items: cart.map((item) => ({
         dishId: item.dish.id,
         quantity: item.quantity,
         notes: item.notes,
@@ -206,9 +209,16 @@ const MenuBrowser = () => {
                   <h4 className="text-md font-semibold">{category.name}</h4>
                   <ul>
                     {category.dishes.map((dish) => (
-                      <li key={dish.id} className="flex items-center justify-between p-2 border-b">
+                      <li
+                        key={dish.id}
+                        className="flex items-center justify-between p-2 border-b"
+                      >
                         <div>
-                          <img src={dish.image} alt={dish.name} className="w-20 h-20 object-cover rounded" />
+                          <img
+                            src={dish.image}
+                            alt={dish.name}
+                            className="w-20 h-20 object-cover rounded"
+                          />
                           <h5 className="font-semibold">{dish.name}</h5>
                           <p className="text-sm">{dish.description}</p>
                           <p className="text-sm font-bold">{`價格: $${dish.price}`}</p>
@@ -252,7 +262,9 @@ const MenuBrowser = () => {
                       type="number"
                       min="1"
                       value={item.quantity}
-                      onChange={(e) => handleQuantityChange(item.dish.id, e.target.value)}
+                      onChange={(e) =>
+                        handleQuantityChange(item.dish.id, e.target.value)
+                      }
                       className="w-16 border rounded px-2 py-1"
                     />
                   </div>
@@ -260,7 +272,9 @@ const MenuBrowser = () => {
                     <label>備註:</label>
                     <textarea
                       value={item.notes}
-                      onChange={(e) => handleNotesChange(item.dish.id, e.target.value)}
+                      onChange={(e) =>
+                        handleNotesChange(item.dish.id, e.target.value)
+                      }
                       className="w-full border rounded px-2 py-1"
                       placeholder="例如: 無辣, 少鹽"
                     />
@@ -268,7 +282,10 @@ const MenuBrowser = () => {
                 </li>
               ))}
               <div className="mt-4">
-                <p className="font-bold">{`總金額: $${cart.reduce((total, item) => total + item.dish.price * item.quantity, 0)}`}</p>
+                <p className="font-bold">{`總金額: $${cart.reduce(
+                  (total, item) => total + item.dish.price * item.quantity,
+                  0
+                )}`}</p>
                 <button
                   className="bg-blue-500 text-white px-4 py-2 rounded mt-2"
                   onClick={handleCheckout} // 添加結帳按鈕
@@ -280,7 +297,10 @@ const MenuBrowser = () => {
           ) : (
             <p>購物車是空的。</p>
           )}
-          {orderSuccess && <p className="text-green-500 mt-2">{orderSuccess}</p>} {/* 顯示訂單成功訊息 */}
+          {orderSuccess && (
+            <p className="text-green-500 mt-2">{orderSuccess}</p>
+          )}{' '}
+          {/* 顯示訂單成功訊息 */}
         </div>
       </div>
     </div>

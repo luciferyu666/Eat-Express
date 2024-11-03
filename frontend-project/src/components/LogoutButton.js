@@ -1,23 +1,39 @@
-import React from 'react';
+import { storeAuthToken } from "@utils/tokenStorage";
+// frontend-project/src/components/LogoutButton.js
+
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import api from '../utils/api'; // 確保路徑正確
+import axiosInstance from 'axios'; // 使用 axios 直接
+import { UserContext } from '@context/UserContext'; // 引入 UserContext
+import { disconnectSocket } from '@utils/socket'; // 引入 disconnectSocket
+
+const API_BASE_URL =
+  process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 
 const LogoutButton = () => {
   const navigate = useNavigate(); // 用來導航的 hook
+  const { setUser } = useContext(UserContext);
 
   // 處理登出邏輯
   const handleLogout = async () => {
     try {
       // 發送登出請求到後端
-      await api.post('/auth/logout'); // 已經設置 baseURL 為 '/api'
+      await axiosInstance.post(`${API_BASE_URL}/auth/logout`, null, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`, // 使用統一的 'token'
+        },
+      });
 
       // 清除 LocalStorage 中的 token 和角色資訊
-      localStorage.removeItem('authToken');
+      localStorage.removeItem('token'); // 統一使用 'token'
       localStorage.removeItem('role');
       localStorage.removeItem('userId');
 
-      // 重新連接 Socket（如果有需要）
-      // disconnectSocket(); // 根據您的實現情況
+      // 更新 UserContext
+      setUser({ token: null, role: null });
+
+      // 關閉 Socket 連接
+      disconnectSocket();
 
       // 導航到應用程式的入口頁面
       navigate('/', { replace: true });

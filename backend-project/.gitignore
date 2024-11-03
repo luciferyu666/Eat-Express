@@ -1,0 +1,34 @@
+# 後端 .gitignore
+
+# 忽略 node_modules 目錄
+/backend-project/node_modules
+
+# 忽略環境變數文件
+/backend-project/.env
+/backend-project/.env.example
+
+# 忽略日誌文件
+/backend-project/*.log
+/backend-project/logs/
+
+# 忽略測試覆蓋率
+/backend-project/coverage/
+
+# 忽略生產環境構建文件
+/backend-project/dist/
+backend-project/build/
+
+# 忽略操作系統生成的文件
+/backend-project/.DS_Store
+/backend-project/Thumbs.db
+
+# 忽略編譯生成的文件（如 TypeScript 編譯）
+/backend-project/*.tsbuildinfo
+
+# 忽略 IDE 設定文件
+/backend-project/.idea/
+/backend-project/.vscode/
+
+/# 忽略其他不必要的文件或目錄
+/backend-project/tmp/
+backend-project/temp/

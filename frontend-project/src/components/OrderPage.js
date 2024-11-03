@@ -1,5 +1,6 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 import React, { useEffect, useState } from 'react';
-import api from '../utils/api';
+import api from '@utils/api';
 
 const OrderPage = ({ userId }) => {
   const [addresses, setAddresses] = useState([]);

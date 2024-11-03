@@ -1,11 +1,16 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // frontend-project/src/components/AdminHomePage/OrderStatusMonitor.js
 
 import React, { useEffect, useState } from 'react';
-import api from '../../utils/api';
+import api from '@utils/api';
 
 const OrderStatusMonitor = () => {
   const [orders, setOrders] = useState([]);
-  const [filter, setFilter] = useState({ restaurant: '', deliveryPerson: '', user: '' });
+  const [filter, setFilter] = useState({
+    restaurant: '',
+    deliveryPerson: '',
+    user: '',
+  });
 
   useEffect(() => {
     fetchOrders();
@@ -23,7 +28,7 @@ const OrderStatusMonitor = () => {
   return (
     <div className="mb-6">
       <h3 className="text-xl font-semibold mb-2">訂單狀態監控</h3>
-      
+
       {/* 篩選選項 */}
       <div className="flex space-x-4 mb-4">
         <input
@@ -37,7 +42,9 @@ const OrderStatusMonitor = () => {
           type="text"
           placeholder="外送員名稱"
           value={filter.deliveryPerson}
-          onChange={(e) => setFilter({ ...filter, deliveryPerson: e.target.value })}
+          onChange={(e) =>
+            setFilter({ ...filter, deliveryPerson: e.target.value })
+          }
           className="px-3 py-2 border rounded"
         />
         <input
@@ -61,7 +68,7 @@ const OrderStatusMonitor = () => {
           </tr>
         </thead>
         <tbody>
-          {orders.map(order => (
+          {orders.map((order) => (
             <tr key={order.id} className="text-center border-t">
               <td className="px-4 py-2">{order.id}</td>
               <td className="px-4 py-2">{order.userName}</td>

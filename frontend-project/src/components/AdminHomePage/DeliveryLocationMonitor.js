@@ -1,19 +1,20 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // frontend-project/src/components/AdminHomePage/DeliveryLocationMonitor.js
 
 import React, { useEffect, useState } from 'react';
 import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
-import api from '../../utils/api';
+import api from '@utils/api';
 
 const containerStyle = {
   width: '100%',
-  height: '400px'
+  height: '400px',
 };
 
-const center = { lat: 25.0330, lng: 121.5654 }; // 台北市中心坐標，可根據需要調整
+const center = { lat: 25.033, lng: 121.5654 }; // 台北市中心坐標，可根據需要調整
 
 const DeliveryLocationMonitor = () => {
   const [deliveryPersons, setDeliveryPersons] = useState([]);
-  
+
   // 使用 useJsApiLoader 來控制 Google Maps API 的加載狀態
   const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -42,12 +43,8 @@ const DeliveryLocationMonitor = () => {
     <div className="mt-6">
       <h4 className="text-lg font-semibold mb-2">外送員位置監控</h4>
       {isLoaded ? (
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={12}
-        >
-          {deliveryPersons.map(dp => (
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={12}>
+          {deliveryPersons.map((dp) => (
             <Marker
               key={dp.id}
               position={{ lat: dp.location.lat, lng: dp.location.lng }}

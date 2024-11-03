@@ -1,6 +1,7 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/SystemMonitor.js
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance from 'axios';
 
 const SystemMonitor = () => {
   const [systemData, setSystemData] = useState({
@@ -10,9 +11,10 @@ const SystemMonitor = () => {
   });
 
   useEffect(() => {
-    axios.get('/api/system-status')
-      .then(response => setSystemData(response.data))
-      .catch(error => console.error('Error fetching system status:', error));
+    axiosInstance
+      .get("/system-status")
+      .then((response) => setSystemData(response.data))
+      .catch((error) => console.error('Error fetching system status:', error));
   }, []);
 
   return (

@@ -1,7 +1,8 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/RestaurantHomePage/MenuManagement.js
 
 import React, { useEffect, useState } from 'react';
-import api from '../../utils/api';
+import api from '@utils/api';
 
 const MenuManagement = () => {
   const [categories, setCategories] = useState([]);
@@ -17,17 +18,19 @@ const MenuManagement = () => {
 
   useEffect(() => {
     // 獲取菜品分類
-    api.get('/restaurant/menu/categories')
-      .then(response => setCategories(response.data))
-      .catch(error => console.error('獲取菜品分類失敗:', error));
+    api
+      .get('/restaurant/menu/categories')
+      .then((response) => setCategories(response.data))
+      .catch((error) => console.error('獲取菜品分類失敗:', error));
   }, []);
 
   useEffect(() => {
     if (selectedCategory) {
       // 獲取選定分類的菜品
-      api.get(`/restaurant/menu/categories/${selectedCategory}/dishes`)
-        .then(response => setDishes(response.data))
-        .catch(error => console.error('獲取菜品失敗:', error));
+      api
+        .get(`/restaurant/menu/categories/${selectedCategory}/dishes`)
+        .then((response) => setDishes(response.data))
+        .catch((error) => console.error('獲取菜品失敗:', error));
     }
   }, [selectedCategory]);
 
@@ -38,30 +41,39 @@ const MenuManagement = () => {
       return;
     }
 
-    api.post('/restaurant/menu/dishes', newDish)
-      .then(response => {
+    api
+      .post('/restaurant/menu/dishes', newDish)
+      .then((response) => {
         setDishes([...dishes, response.data]);
-        setNewDish({ name: '', description: '', price: '', image: '', categoryId: '' });
+        setNewDish({
+          name: '',
+          description: '',
+          price: '',
+          image: '',
+          categoryId: '',
+        });
       })
-      .catch(error => console.error('添加菜品失敗:', error));
+      .catch((error) => console.error('添加菜品失敗:', error));
   };
 
   const handleDeleteDish = (dishId) => {
-    api.delete(`/restaurant/menu/dishes/${dishId}`)
+    api
+      .delete(`/restaurant/menu/dishes/${dishId}`)
       .then(() => {
-        setDishes(dishes.filter(dish => dish.id !== dishId));
+        setDishes(dishes.filter((dish) => dish.id !== dishId));
       })
-      .catch(error => console.error('刪除菜品失敗:', error));
+      .catch((error) => console.error('刪除菜品失敗:', error));
   };
 
   const handleEditDish = (dishId, updatedDish) => {
-    api.put(`/restaurant/menu/dishes/${dishId}`, updatedDish)
-      .then(response => {
-        setDishes(dishes.map(dish => 
-          dish.id === dishId ? response.data : dish
-        ));
+    api
+      .put(`/restaurant/menu/dishes/${dishId}`, updatedDish)
+      .then((response) => {
+        setDishes(
+          dishes.map((dish) => (dish.id === dishId ? response.data : dish))
+        );
       })
-      .catch(error => console.error('編輯菜品失敗:', error));
+      .catch((error) => console.error('編輯菜品失敗:', error));
   };
 
   return (
@@ -72,11 +84,13 @@ const MenuManagement = () => {
         <div className="md:w-1/4 mr-4">
           <h3 className="text-lg font-semibold mb-2">菜品分類</h3>
           <ul className="max-h-64 overflow-y-auto">
-            {categories.map(category => (
+            {categories.map((category) => (
               <li
                 key={category.id}
                 className={`p-2 cursor-pointer ${
-                  selectedCategory === category.id ? 'bg-blue-100' : 'hover:bg-gray-100'
+                  selectedCategory === category.id
+                    ? 'bg-blue-100'
+                    : 'hover:bg-gray-100'
                 }`}
                 onClick={() => setSelectedCategory(category.id)}
               >
@@ -92,8 +106,11 @@ const MenuManagement = () => {
             <div>
               <h3 className="text-lg font-semibold mb-2">菜品列表</h3>
               <ul className="space-y-4">
-                {dishes.map(dish => (
-                  <li key={dish.id} className="border rounded p-4 flex justify-between items-center">
+                {dishes.map((dish) => (
+                  <li
+                    key={dish.id}
+                    className="border rounded p-4 flex justify-between items-center"
+                  >
                     <div>
                       <p className="font-semibold">{dish.name}</p>
                       <p>{dish.description}</p>
@@ -104,9 +121,15 @@ const MenuManagement = () => {
                         className="bg-yellow-500 text-white px-3 py-1 rounded"
                         onClick={() => {
                           // 處理編輯菜品的邏輯
-                          const updatedName = prompt('請輸入新的菜品名稱:', dish.name);
+                          const updatedName = prompt(
+                            '請輸入新的菜品名稱:',
+                            dish.name
+                          );
                           if (updatedName) {
-                            handleEditDish(dish.id, { ...dish, name: updatedName });
+                            handleEditDish(dish.id, {
+                              ...dish,
+                              name: updatedName,
+                            });
                           }
                         }}
                       >
@@ -131,27 +154,35 @@ const MenuManagement = () => {
                     type="text"
                     placeholder="菜品名稱"
                     value={newDish.name}
-                    onChange={(e) => setNewDish({ ...newDish, name: e.target.value })}
+                    onChange={(e) =>
+                      setNewDish({ ...newDish, name: e.target.value })
+                    }
                     className="border rounded px-2 py-1 w-full"
                   />
                   <textarea
                     placeholder="菜品描述"
                     value={newDish.description}
-                    onChange={(e) => setNewDish({ ...newDish, description: e.target.value })}
+                    onChange={(e) =>
+                      setNewDish({ ...newDish, description: e.target.value })
+                    }
                     className="border rounded px-2 py-1 w-full"
                   />
                   <input
                     type="number"
                     placeholder="價格"
                     value={newDish.price}
-                    onChange={(e) => setNewDish({ ...newDish, price: e.target.value })}
+                    onChange={(e) =>
+                      setNewDish({ ...newDish, price: e.target.value })
+                    }
                     className="border rounded px-2 py-1 w-full"
                   />
                   <input
                     type="text"
                     placeholder="圖片URL"
                     value={newDish.image}
-                    onChange={(e) => setNewDish({ ...newDish, image: e.target.value })}
+                    onChange={(e) =>
+                      setNewDish({ ...newDish, image: e.target.value })
+                    }
                     className="border rounded px-2 py-1 w-full"
                   />
                   <button

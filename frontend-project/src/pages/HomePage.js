@@ -1,3 +1,4 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/pages/HomePage.js
 
 import React from 'react';
@@ -8,10 +9,14 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-green-400 to-blue-500 flex flex-col items-center justify-center p-4">
-      <h1 className="text-4xl font-bold text-white mb-8">歡迎來到食品外送平台</h1>
+      <h1 className="text-4xl font-bold text-white mb-8">
+        歡迎來到食品外送平台
+      </h1>
 
       <div className="w-full max-w-md bg-white bg-opacity-80 rounded-lg shadow-lg p-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">請選擇您的身份登入</h2>
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+          請選擇您的身份登入
+        </h2>
         <div className="flex flex-col space-y-4">
           <Link
             to="/user/login"

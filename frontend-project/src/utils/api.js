@@ -1,7 +1,11 @@
-import axios from 'axios';
-import { connectSocket, disconnectSocket } from '../socket';
+import { storeAuthToken } from "@utils/tokenStorage";
+// src/utils/api.js
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api';
+import axios from 'axios';
+import { connectSocket, disconnectSocket } from '@utils/socket';
+
+const API_BASE_URL =
+  process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api';
 
 const loginPaths = {
   admin: '/admin/login',
@@ -11,7 +15,7 @@ const loginPaths = {
 };
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: API_BASE_URL, // 确保 baseURL 包含 /api
   headers: {
     'Content-Type': 'application/json',
   },
@@ -36,13 +40,20 @@ api.interceptors.response.use(
   async (error) => {
     const originalRequest = error.config;
 
-    if (error.response && error.response.status === 401 && !originalRequest._retry) {
+    if (
+      error.response &&
+      error.response.status === 401 &&
+      !originalRequest._retry
+    ) {
       originalRequest._retry = true;
 
       try {
         const refreshToken = getRefreshToken();
         if (refreshToken) {
-          const response = await axios.post(`${API_BASE_URL}/auth/refresh`, { token: refreshToken });
+          // 使用 api 实例和相对路径
+          const response = await api.post('/auth/refresh', {
+            token: refreshToken,
+          });
           const newToken = response.data.authToken;
 
           localStorage.setItem('authToken', newToken);
@@ -54,10 +65,10 @@ api.interceptors.response.use(
 
           return api(originalRequest);
         } else {
-          throw new Error('沒有提供 Refresh Token');
+          throw new Error('没有提供 Refresh Token');
         }
       } catch (refreshError) {
-        console.error('刷新 Token 失敗:', refreshError);
+        console.error('刷新 Token 失败:', refreshError);
         handleTokenExpired();
       }
     }
@@ -74,12 +85,12 @@ const handleTokenExpired = () => {
   localStorage.removeItem('role');
   localStorage.removeItem('userId');
 
-  disconnectSocket(); // 斷開 Socket 連接
+  disconnectSocket(); // 断开 Socket 连接
 
   const redirectPath = loginPaths[role] || '/';
   window.location.href = redirectPath;
 
-  alert('您的登入已過期，請重新登入。');
+  alert('您的登录已过期，请重新登录。');
 };
 
 export default api;

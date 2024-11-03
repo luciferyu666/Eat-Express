@@ -1,9 +1,11 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/UserHomePage/PopularDishes.js
 
 import React, { useEffect, useState } from 'react';
-import axios from '../../utils/api';
+import axios from '@utils/api';
 
-const PopularDishes = ({ addToCart }) => { // 接收 addToCart 函數作為道具
+const PopularDishes = ({ addToCart }) => {
+  // 接收 addToCart 函數作為道具
   const [popularDishes, setPopularDishes] = useState([]);
 
   useEffect(() => {
@@ -22,15 +24,15 @@ const PopularDishes = ({ addToCart }) => { // 接收 addToCart 函數作為道�
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {popularDishes.map((dish) => (
           <div key={dish.id} className="border rounded p-2">
-            <img 
-              src={placeholderImage} 
-              alt={dish.name} 
-              className="w-full h-32 object-cover rounded" 
+            <img
+              src={placeholderImage}
+              alt={dish.name}
+              className="w-full h-32 object-cover rounded"
             />
             <h3 className="text-lg font-semibold mt-2">{dish.name}</h3>
             <p>{dish.description}</p>
             <p className="font-bold">{`價格: $${dish.price}`}</p>
-            <button 
+            <button
               className="mt-2 bg-blue-500 text-white px-3 py-1 rounded"
               onClick={() => addToCart(dish)} // 添加點擊事件處理器
             >

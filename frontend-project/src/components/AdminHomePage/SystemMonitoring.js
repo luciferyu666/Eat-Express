@@ -1,16 +1,17 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // frontend-project/src/components/AdminHomePage/SystemMonitoring.js
 
 import React, { useEffect, useState } from 'react';
-import api from '../../utils/api'; // Axios 實例
-import OrderStatusMonitor from './OrderStatusMonitor';
-import OperationalStatusMonitor from './OperationalStatusMonitor';
-import DeliveryLocationMonitor from './DeliveryLocationMonitor';
+import api from '@utils/api'; // Axios 實例
+import OrderStatusMonitor from '@components/AdminHomePage/OrderStatusMonitor';
+import OperationalStatusMonitor from '@components/AdminHomePage/OperationalStatusMonitor';
+import DeliveryLocationMonitor from '@components/AdminHomePage/DeliveryLocationMonitor';
 
 const SystemMonitoring = () => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold mb-4">系統監控</h2>
-      
+
       {/* 訂單狀態監控 */}
       <OrderStatusMonitor />
 

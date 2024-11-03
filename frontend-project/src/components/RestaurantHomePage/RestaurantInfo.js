@@ -1,3 +1,4 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/RestaurantHomePage/RestaurantInfo.js
 
 import React, { useState } from 'react';
@@ -66,21 +67,49 @@ const RestaurantInfo = ({ restaurantData, updateRestaurantData }) => {
             />
           </div>
           <div className="flex space-x-4 mt-4">
-            <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">保存</button>
-            <button type="button" onClick={() => setEditMode(false)} className="bg-gray-300 px-4 py-2 rounded-md">取消</button>
+            <button
+              type="submit"
+              className="bg-blue-500 text-white px-4 py-2 rounded-md"
+            >
+              保存
+            </button>
+            <button
+              type="button"
+              onClick={() => setEditMode(false)}
+              className="bg-gray-300 px-4 py-2 rounded-md"
+            >
+              取消
+            </button>
           </div>
         </form>
       ) : (
         <div className="space-y-2">
           <div className="logo-and-slogan mb-4">
-            <img src={restaurantData.logoUrl} alt={`${restaurantData.name} 商標`} className="w-32 h-32" />
+            <img
+              src={restaurantData.logoUrl}
+              alt={`${restaurantData.name} 商標`}
+              className="w-32 h-32"
+            />
             <p className="italic mt-2">{restaurantData.slogan}</p>
           </div>
-          <p><strong>名稱:</strong> {restaurantData.name}</p>
-          <p><strong>地址:</strong> {restaurantData.address}</p>
-          <p><strong>聯繫電話:</strong> {restaurantData.phone}</p>
-          <p><strong>營業時間:</strong> {restaurantData.businessHours}</p>
-          <button onClick={() => setEditMode(true)} className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4">編輯</button>
+          <p>
+            <strong>名稱:</strong> {restaurantData.name}
+          </p>
+          <p>
+            <strong>地址:</strong> {restaurantData.address}
+          </p>
+          <p>
+            <strong>聯繫電話:</strong> {restaurantData.phone}
+          </p>
+          <p>
+            <strong>營業時間:</strong> {restaurantData.businessHours}
+          </p>
+          <button
+            onClick={() => setEditMode(true)}
+            className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4"
+          >
+            編輯
+          </button>
         </div>
       )}
     </div>

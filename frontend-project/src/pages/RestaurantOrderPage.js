@@ -1,26 +1,28 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import socket from '../socket';  // 引入 WebSocket 配置
+import socket from '@utils/socket'; // 引入 WebSocket 配置
 
 const RestaurantOrderPage = () => {
-  const [orders, setOrders] = useState([]);  // 訂單列表
-  const [selectedOrder, setSelectedOrder] = useState(null);  // 當前選擇的訂單
+  const [orders, setOrders] = useState([]); // 訂單列表
+  const [selectedOrder, setSelectedOrder] = useState(null); // 當前選擇的訂單
 
   // 從後端獲取所有待處理訂單
   useEffect(() => {
-    axios.get('/api/orders')
-      .then(response => setOrders(response.data))
-      .catch(error => console.error('Error fetching orders:', error));
+    axios
+      .get("/orders")
+      .then((response) => setOrders(response.data))
+      .catch((error) => console.error('Error fetching orders:', error));
   }, []);
 
   // 當有新訂單時，通過 WebSocket 實時接收
   useEffect(() => {
     socket.on('newOrder', (newOrder) => {
-      setOrders(prevOrders => [newOrder, ...prevOrders]);  // 新訂單插入到列表頂部
+      setOrders((prevOrders) => [newOrder, ...prevOrders]); // 新訂單插入到列表頂部
     });
 
     return () => {
-      socket.off('newOrder');  // 組件卸載時清理 WebSocket 連接
+      socket.off('newOrder'); // 組件卸載時清理 WebSocket 連接
     };
   }, []);
 
@@ -32,11 +34,13 @@ const RestaurantOrderPage = () => {
   // 更新訂單狀態，並通知後端
   const updateOrderStatus = async (status) => {
     try {
-      await axios.put(`/api/orders/${selectedOrder.id}/status`, { status });
-      setOrders(prevOrders => prevOrders.map(order => 
-        order.id === selectedOrder.id ? { ...order, status } : order
-      ));
-      setSelectedOrder(null);  // 更新狀態後清除選擇的訂單
+      await axios.put(`/orders/${selectedOrder.id}/status`, { status });
+      setOrders((prevOrders) =>
+        prevOrders.map((order) =>
+          order.id === selectedOrder.id ? { ...order, status } : order
+        )
+      );
+      setSelectedOrder(null); // 更新狀態後清除選擇的訂單
     } catch (error) {
       console.error('Error updating order status:', error);
     }
@@ -68,7 +72,7 @@ const RestaurantOrderPage = () => {
       <div className="order-list">
         <h2>待處理訂單</h2>
         <ul>
-          {orders.map(order => (
+          {orders.map((order) => (
             <li key={order.id} onClick={() => handleSelectOrder(order)}>
               <span>訂單號：{order.id}</span>
               <span>狀態：{renderOrderStatus(order.status)}</span>
@@ -86,7 +90,7 @@ const RestaurantOrderPage = () => {
           <p>配送地址：{selectedOrder.deliveryAddress}</p>
           <p>菜品：</p>
           <ul>
-            {selectedOrder.items.map(item => (
+            {selectedOrder.items.map((item) => (
               <li key={item.id}>
                 {item.name} - {item.quantity}份
               </li>

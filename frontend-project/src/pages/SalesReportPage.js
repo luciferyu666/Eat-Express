@@ -1,13 +1,14 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { CSVLink } from 'react-csv';
 
 const SalesReportPage = () => {
   const [salesData, setSalesData] = useState([]);
-  const [timeRange, setTimeRange] = useState('daily');  // 查詢的時間範圍
-  const [totalOrders, setTotalOrders] = useState(0);    // 訂單總數
-  const [totalRevenue, setTotalRevenue] = useState(0);  // 總收入
-  const [averageOrderValue, setAverageOrderValue] = useState(0);  // 平均訂單金額
+  const [timeRange, setTimeRange] = useState('daily'); // 查詢的時間範圍
+  const [totalOrders, setTotalOrders] = useState(0); // 訂單總數
+  const [totalRevenue, setTotalRevenue] = useState(0); // 總收入
+  const [averageOrderValue, setAverageOrderValue] = useState(0); // 平均訂單金額
 
   // 獲取銷售數據
   useEffect(() => {
@@ -16,7 +17,7 @@ const SalesReportPage = () => {
 
   const fetchSalesData = async (range) => {
     try {
-      const response = await axios.get(`/api/sales?range=${range}`);
+      const response = await axios.get(`/sales?range=${range}`);
       setSalesData(response.data.sales);
       setTotalOrders(response.data.totalOrders);
       setTotalRevenue(response.data.totalRevenue);
@@ -63,7 +64,7 @@ const SalesReportPage = () => {
           </tr>
         </thead>
         <tbody>
-          {salesData.map(dish => (
+          {salesData.map((dish) => (
             <tr key={dish.dishId}>
               <td>{dish.name}</td>
               <td>{dish.quantity}</td>

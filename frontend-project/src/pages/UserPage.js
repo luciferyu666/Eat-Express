@@ -1,3 +1,4 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/pages/UserPage.js
 import React from 'react';
 

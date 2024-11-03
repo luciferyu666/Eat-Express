@@ -1,7 +1,8 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/RestaurantHomePage/OrderManagement.js
 
 import React from 'react';
-import OrderDetail from './OrderDetail';
+import OrderDetail from '@components/RestaurantHomePage/OrderDetail';
 
 const OrderManagement = ({ orders, updateOrderStatus }) => {
   return (
@@ -9,9 +10,12 @@ const OrderManagement = ({ orders, updateOrderStatus }) => {
       <h2 className="text-xl font-bold mb-4">新訂單接收與處理</h2>
       {orders.length > 0 ? (
         <ul className="space-y-4">
-          {orders.map(order => (
+          {orders.map((order) => (
             <li key={order.id} className="border rounded p-4">
-              <OrderDetail order={order} updateOrderStatus={updateOrderStatus} />
+              <OrderDetail
+                order={order}
+                updateOrderStatus={updateOrderStatus}
+              />
             </li>
           ))}
         </ul>

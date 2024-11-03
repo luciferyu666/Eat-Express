@@ -1,6 +1,7 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/MenuPage.js
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axiosInstance from 'axios';
 
 const MenuPage = ({ restaurantId }) => {
   const [menu, setMenu] = useState([]);
@@ -9,7 +10,9 @@ const MenuPage = ({ restaurantId }) => {
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        const { data } = await axios.get(`/api/restaurants/${restaurantId}/menu`);
+        const { data } = await axiosInstance.get(
+          `/restaurants/${restaurantId}/menu`
+        );
         setMenu(data);
       } catch (error) {
         console.error('Error fetching menu:', error);

@@ -1,99 +1,89 @@
-// orderRoutes.js
+// src/routes/orderRoutes.js
+
 const express = require('express');
 const router = express.Router();
-const Order = require('../models/Order');  // 引入訂單模型
-const verifyToken = require('../middleware/verifyToken');  // 引入驗證中間件
+const orderController = require('../controllers/orderController'); // 從 orderController 導入控制器函數
+const authenticate = require('../middleware/authenticate'); // 引入身份驗證中間件
+const authorize = require('../middleware/authorize'); // 引入授權中間件
+const mongoose = require('mongoose'); // 引入 mongoose 以進行 ID 驗證
 
-// 用戶下單（需要身份驗證）
-router.post('/create', verifyToken, async (req, res) => {
-  const { userId, restaurantId, items, deliveryAddress, paymentMethod } = req.body;
-  const totalPrice = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+// 獲取所有訂單（僅限管理員）
+router.get(
+  '/',
+  authenticate,
+  authorize('admin'),
+  orderController.getAllOrders
+);
 
-  try {
-    const newOrder = new Order({
-      userId,
-      restaurant: restaurantId,
-      items,
-      deliveryAddress,
-      paymentMethod,
-      status: 'waiting', // 訂單初始狀態為 "等待接單"
-      totalPrice,
-    });
-
-    const savedOrder = await newOrder.save();
-    res.status(201).json(savedOrder);
-  } catch (error) {
-    res.status(500).json({ error: '無法創建訂單' });
-  }
-});
-
-// 餐廳接單（需要身份驗證）
-router.post('/:orderId/accept', verifyToken, async (req, res) => {
-  const { orderId } = req.params;
-
-  try {
-    const order = await Order.findById(orderId);
-    if (!order) {
-      return res.status(404).json({ error: '訂單未找到' });
+// 根據 ID 獲取訂單（管理員、客戶、外送員）
+router.get(
+  '/:orderId',
+  authenticate,
+  authorize(['admin', 'customer', 'delivery_person']),
+  (req, res, next) => {
+    const { orderId } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(orderId)) {
+      return res.status(400).json({ error: '無效的訂單 ID' });
     }
+    next();
+  },
+  orderController.getOrderById
+);
 
-    // 更新訂單狀態為「製作中」
-    order.status = 'preparing';
-    await order.save();
+// 獲取當前用戶的訂單（客戶或外送員）
+router.get(
+  '/current',
+  authenticate,
+  authorize(['customer', 'delivery_person']),
+  orderController.getCurrentOrders
+);
 
-    // 通知系統訂單狀態已更新
-    req.app.get('io').to(orderId).emit('orderStatusUpdate', { orderId: order._id, status: order.status });
+// 創建訂單（僅客戶）
+router.post(
+  '/',
+  authenticate,
+  authorize(['customer']),
+  // 根據您的 orderController.createOrder 的實現，可能需要添加驗證
+  orderController.createOrder
+);
 
-    res.json({ message: '餐廳已接單', order });
-  } catch (error) {
-    res.status(500).json({ error: '無法更新訂單狀態' });
-  }
-});
-
-// 外送員更新訂單狀態（需要身份驗證）
-router.post('/:orderId/status', verifyToken, async (req, res) => {
-  const { orderId } = req.params;
-  const { status, deliveryLocation } = req.body;  // 新的訂單狀態和可選的外送員實時位置
-
-  try {
-    const order = await Order.findById(orderId);
-    if (!order) {
-      return res.status(404).json({ error: '訂單未找到' });
+// 更新訂單狀態（管理員、外送員）
+router.put(
+  '/:orderId/status',
+  authenticate,
+  authorize(['admin', 'delivery_person']),
+  (req, res, next) => {
+    const { orderId } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(orderId)) {
+      return res.status(400).json({ error: '無效的訂單 ID' });
     }
-
-    // 更新訂單狀態和配送位置（如果提供）
-    order.status = status;
-    if (deliveryLocation) {
-      order.deliveryLocation = deliveryLocation;
+    next();
+  },
+  // 添加狀態驗證
+  (req, res, next) => {
+    const { status } = req.body;
+    const validStatuses = ['pending', 'assigned', 'in_transit', 'delivered', 'cancelled'];
+    if (!validStatuses.includes(status)) {
+      return res.status(400).json({ error: `無效的狀態值，請選擇以下之一：${validStatuses.join(', ')}` });
     }
-    await order.save();
+    next();
+  },
+  orderController.updateOrderStatus
+);
 
-    // 通知系統訂單狀態已更新，並推送實時位置
-    req.app.get('io').to(orderId).emit('orderStatusUpdate', { orderId: order._id, status: order.status, deliveryLocation });
-
-    res.json({ message: '訂單狀態已更新', order });
-  } catch (error) {
-    res.status(500).json({ error: '無法更新訂單狀態' });
-  }
-});
-
-// 查詢訂單狀態（需要身份驗證）
-router.get('/:orderId', verifyToken, async (req, res) => {
-  const { orderId } = req.params;
-
-  try {
-    const order = await Order.findById(orderId)
-      .populate('restaurant')
-      .populate('items.dish')
-      .populate('userId');
-    if (!order) {
-      return res.status(404).json({ error: '訂單未找到' });
+// 刪除訂單（僅限管理員）
+router.delete(
+  '/:orderId',
+  authenticate,
+  authorize('admin'),
+  (req, res, next) => {
+    const { orderId } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(orderId)) {
+      return res.status(400).json({ error: '無效的訂單 ID' });
     }
-
-    res.json(order);
-  } catch (error) {
-    res.status(500).json({ error: '無法獲取訂單詳情' });
-  }
-});
+    next();
+  },
+  orderController.deleteOrder
+);
 
 module.exports = router;

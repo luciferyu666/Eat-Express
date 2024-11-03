@@ -1,7 +1,8 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/UserHomePage/SearchBar.js
 
 import React, { useState, useEffect } from 'react';
-import axios from '../../utils/api';
+import axios from '@utils/api';
 
 const SearchBar = () => {
   const [query, setQuery] = useState('');

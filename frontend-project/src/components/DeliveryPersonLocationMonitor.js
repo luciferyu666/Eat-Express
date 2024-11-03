@@ -1,3 +1,4 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/DeliveryPersonLocationMonitor.js
 
 import React, { useEffect, useState } from 'react';
@@ -11,7 +12,7 @@ const mapContainerStyle = {
 };
 
 const center = {
-  lat: 25.0330, // 台北市經緯度，可根據需要調整
+  lat: 25.033, // 台北市經緯度，可根據需要調整
   lng: 121.5654,
 };
 
@@ -23,7 +24,9 @@ const DeliveryPersonLocationMonitor = () => {
     const fetchLocations = async () => {
       try {
         // 更新請求 URL 指向正確的後端 API
-        const response = await axios.get('http://localhost:5000/api/delivery-persons/locations');
+        const response = await axios.get(
+          'http://localhost:5000/api/delivery-person/locations'
+        );
         // 假設返回的數據格式為 [{ location: { lat: ..., lng: ... } }, ...]
         setLocations(response.data);
       } catch (error) {
@@ -45,13 +48,17 @@ const DeliveryPersonLocationMonitor = () => {
     <div className="delivery-person-location-monitor mb-4">
       <h3 className="text-xl font-semibold mb-2">外送員位置監控</h3>
       <LoadScript googleMapsApiKey="AIzaSyA1rT_LEzTxgfMdPSibaI9C5ePMEmvcCsA">
-        <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={12}>
+        <GoogleMap
+          mapContainerStyle={mapContainerStyle}
+          center={center}
+          zoom={12}
+        >
           {locations.map((deliveryPerson, index) => (
-            <Marker 
+            <Marker
               key={index}
               position={{
                 lat: deliveryPerson.location.coordinates[1], // 確保數據格式與後端一致
-                lng: deliveryPerson.location.coordinates[0]
+                lng: deliveryPerson.location.coordinates[0],
               }}
             />
           ))}

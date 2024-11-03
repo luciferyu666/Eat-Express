@@ -1,7 +1,8 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // frontend-project/src/components/AdminHomePage/UserManagement.js
 
 import React, { useEffect, useState } from 'react';
-import api from '../../utils/api';
+import api from '@utils/api';
 
 const UserManagement = () => {
   const [users, setUsers] = useState([]);
@@ -54,7 +55,7 @@ const UserManagement = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map(user => (
+          {users.map((user) => (
             <tr key={user.id} className="text-center border-t">
               <td className="px-4 py-2">{user.id}</td>
               <td className="px-4 py-2">{user.name}</td>

@@ -1,7 +1,8 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // frontend-project/src/components/AdminHomePage/OperationalStatusMonitor.js
 
 import React, { useEffect, useState } from 'react';
-import api from '../../utils/api';
+import api from '@utils/api';
 
 const OperationalStatusMonitor = () => {
   const [restaurantStatus, setRestaurantStatus] = useState([]);
@@ -15,12 +16,13 @@ const OperationalStatusMonitor = () => {
 
   const fetchOperationalData = async () => {
     try {
-      const [restaurants, deliveryPersons, users, systemAlerts] = await Promise.all([
-        api.get('/restaurants/status'),
-        api.get('/deliveryPersons/activeCount'),
-        api.get('/users/activityCount'),
-        api.get('/alerts')
-      ]);
+      const [restaurants, deliveryPersons, users, systemAlerts] =
+        await Promise.all([
+          api.get('/restaurants/status'),
+          api.get('/deliveryPersons/activeCount'),
+          api.get('/users/activityCount'),
+          api.get('/alerts'),
+        ]);
 
       setRestaurantStatus(restaurants.data);
       setActiveDeliveryPersons(deliveryPersons.data.count);
@@ -34,12 +36,12 @@ const OperationalStatusMonitor = () => {
   return (
     <div>
       <h3 className="text-xl font-semibold mb-2">運營狀況監控</h3>
-      
+
       {/* 餐廳營業情況 */}
       <div className="mb-4">
         <h4 className="text-lg font-semibold">餐廳營業情況</h4>
         <ul className="list-disc list-inside">
-          {restaurantStatus.map(restaurant => (
+          {restaurantStatus.map((restaurant) => (
             <li key={restaurant.id}>
               {restaurant.name} - {restaurant.status}
             </li>
@@ -64,7 +66,7 @@ const OperationalStatusMonitor = () => {
         <h4 className="text-lg font-semibold">系統告警</h4>
         {alerts.length > 0 ? (
           <ul className="list-disc list-inside text-red-600">
-            {alerts.map(alert => (
+            {alerts.map((alert) => (
               <li key={alert.id}>{alert.message}</li>
             ))}
           </ul>

@@ -1,10 +1,14 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // frontend-project/src/components/AdminNavigation.js
 
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import LogoutButton from './LogoutButton';
+import LogoutButton from '@components/LogoutButton';
+import { UserContext } from '@context/UserContext';
 
 const AdminNavigation = () => {
+  const { user } = useContext(UserContext);
+
   return (
     <nav className="bg-blue-800 p-4 flex justify-between items-center">
       <div>
@@ -25,7 +29,7 @@ const AdminNavigation = () => {
         <Link to="/admin/reports" className="text-white">
           報表分析
         </Link>
-        <LogoutButton />
+        {user && <LogoutButton />}
       </div>
     </nav>
   );

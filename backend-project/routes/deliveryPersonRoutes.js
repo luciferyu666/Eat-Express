@@ -1,93 +1,114 @@
-// routes/deliveryPersonRoutes.js
+// backend-project/routes/deliveryPersonRoutes.js
+
 const express = require('express');
-const DeliveryPerson = require('../models/DeliveryPerson'); // 確保這行導入是正確的
+const { ROLES } = require('../utils/constants'); // 引入统一的角色常量
+const deliveryPersonController = require('../controllers/deliveryPersonController');
+const authenticate = require('../middleware/authenticate');
+const authorizeRoles = require('../middleware/authorizeRoles');
+const { validateObjectId } = require('../middleware/validateObjectId');
+// const logger = require('../utils/logger'); // 移除日志工具的引用
+
 const router = express.Router();
 
-// 獲取所有外送員列表
-router.get('/', async (req, res) => {
-  try {
-    const deliveryPersons = await DeliveryPerson.find();
-    res.json(deliveryPersons);
-  } catch (error) {
-    res.status(500).json({ error: '無法獲取外送員列表', details: error.message });
-  }
+// 统一应用认证中间件
+router.use(authenticate);
+
+// 统一记录请求日志
+router.use((req, res, next) => {
+  console.log(`DeliveryPersonRoutes: ${req.method} ${req.originalUrl}`);
+  next();
 });
 
-// 根據 ID 獲取單一外送員的詳細信息
-router.get('/:personId', async (req, res) => {
-  const { personId } = req.params;
-  try {
-    const deliveryPerson = await DeliveryPerson.findById(personId);
-    if (!deliveryPerson) {
-      return res.status(404).json({ error: '外送員未找到' });
-    }
-    res.json(deliveryPerson);
-  } catch (error) {
-    res.status(500).json({ error: '無法獲取外送員信息', details: error.message });
-  }
-});
+/**
+ * 路由定义
+ */
 
-// 更新外送員信息
-router.put('/:personId', async (req, res) => {
-  const { personId } = req.params;
-  const updatedData = req.body;
+// 1. 获取所有外送员的位置（仅限管理员）
+router.get(
+  '/location',
+  authorizeRoles(ROLES.ADMIN),
+  deliveryPersonController.getAllDeliveryPersonsLocations
+);
 
-  try {
-    const deliveryPerson = await DeliveryPerson.findByIdAndUpdate(personId, updatedData, { new: true });
-    if (!deliveryPerson) {
-      return res.status(404).json({ error: '外送員未找到' });
-    }
-    res.json({ message: '外送員信息已更新', deliveryPerson });
-  } catch (error) {
-    res.status(500).json({ error: '無法更新外送員信息', details: error.message });
-  }
-});
+// 2. 获取外送员的订单历史（仅限外送员本人或管理员）
+router.get(
+  '/order-history',
+  authorizeRoles(ROLES.ADMIN, ROLES.DELIVERY_PERSON),
+  deliveryPersonController.getOrderHistory
+);
 
-// 禁用外送員
-router.put('/:personId/disable', async (req, res) => {
-  const { personId } = req.params;
+// 3. 获取在线状态
+router.get(
+  '/status',
+  authorizeRoles(ROLES.ADMIN, ROLES.DELIVERY_PERSON),
+  deliveryPersonController.getStatus
+);
 
-  try {
-    const deliveryPerson = await DeliveryPerson.findById(personId);
-    if (!deliveryPerson) {
-      return res.status(404).json({ error: '外送員未找到' });
-    }
+// 4. 更新在线状态
+router.patch(
+  '/status',
+  authorizeRoles(ROLES.ADMIN, ROLES.DELIVERY_PERSON),
+  deliveryPersonController.updateStatus
+);
 
-    deliveryPerson.availability = false; // 將外送員的可用狀態設置為不可用
-    await deliveryPerson.save();
-    res.json({ message: '外送員已禁用', deliveryPerson });
-  } catch (error) {
-    res.status(500).json({ error: '無法禁用外送員', details: error.message });
-  }
-});
+// 4.1 更新外送员位置
+router.patch(
+  '/location',
+  authorizeRoles(ROLES.ADMIN, ROLES.DELIVERY_PERSON),
+  deliveryPersonController.updateLocation
+);
 
-// 啟用外送員
-router.put('/:personId/enable', async (req, res) => {
-  const { personId } = req.params;
+// 5. 获取当前订单
+router.get(
+  '/current-order',
+  authorizeRoles(ROLES.ADMIN, ROLES.DELIVERY_PERSON),
+  deliveryPersonController.getCurrentOrders
+);
 
-  try {
-    const deliveryPerson = await DeliveryPerson.findById(personId);
-    if (!deliveryPerson) {
-      return res.status(404).json({ error: '外送員未找到' });
-    }
+// 6. 获取外送员的个人资料
+router.get(
+  '/profile',
+  authorizeRoles(ROLES.ADMIN, ROLES.DELIVERY_PERSON),
+  deliveryPersonController.getDeliveryPersonProfile
+);
 
-    deliveryPerson.availability = true; // 將外送員的可用狀態設置為可用
-    await deliveryPerson.save();
-    res.json({ message: '外送員已啟用', deliveryPerson });
-  } catch (error) {
-    res.status(500).json({ error: '無法啟用外送員', details: error.message });
-  }
-});
+// 7. 获取所有外送员（仅限管理员）
+router.get(
+  '/',
+  authorizeRoles(ROLES.ADMIN),
+  deliveryPersonController.getAllDeliveryPersons
+);
 
-// 获取所有外送员的位置
-router.get('/locations', async (req, res) => {
-  try {
-    const deliveryPersons = await DeliveryPerson.find({}).select('location');
-    res.status(200).json(deliveryPersons);
-  } catch (error) {
-    console.error('获取外送员位置失败:', error);
-    res.status(500).json({ error: '获取外送员位置失败' });
-  }
-});
+// 8. 根据 ID 获取外送员（管理员或外送员本人）
+router.get(
+  '/:personId',
+  authorizeRoles(ROLES.ADMIN, ROLES.DELIVERY_PERSON),
+  validateObjectId('personId'),
+  deliveryPersonController.getDeliveryPersonById
+);
+
+// 9. 更新外送员信息（管理员或外送员本人）
+router.put(
+  '/:personId',
+  authorizeRoles(ROLES.ADMIN, ROLES.DELIVERY_PERSON),
+  validateObjectId('personId'),
+  deliveryPersonController.updateDeliveryPerson
+);
+
+// 10. 禁用外送员（仅限管理员）
+router.patch(
+  '/:personId/disable',
+  authorizeRoles(ROLES.ADMIN),
+  validateObjectId('personId'),
+  deliveryPersonController.disableDeliveryPerson
+);
+
+// 11. 启用外送员（仅限管理员）
+router.patch(
+  '/:personId/enable',
+  authorizeRoles(ROLES.ADMIN),
+  validateObjectId('personId'),
+  deliveryPersonController.enableDeliveryPerson
+);
 
 module.exports = router;

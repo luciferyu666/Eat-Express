@@ -1,27 +1,30 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import socket from '../socket';  // 引入 WebSocket 配置
+import axiosInstance from 'axios';
+import socket from '@utils/socket'; // 引入 WebSocket 配置
 
 const DeliveryOrderStatus = ({ orderId }) => {
-  const [orderStatus, setOrderStatus] = useState('preparing');  // 初始狀態設置為「準備中」
-  const [deliveryLocation, setDeliveryLocation] = useState(null);  // 存儲外送員的實時位置
+  const [orderStatus, setOrderStatus] = useState('preparing'); // 初始狀態設置為「準備中」
+  const [deliveryLocation, setDeliveryLocation] = useState(null); // 存儲外送員的實時位置
 
   // 獲取訂單詳情
   useEffect(() => {
-    axios.get(`/api/orders/${orderId}`)
-      .then(response => setOrderStatus(response.data.status))
-      .catch(error => console.error('Error fetching order details:', error));
+    axiosInstance
+      .get(`/orders/${orderId}`)
+      .then((response) => setOrderStatus(response.data.status))
+      .catch((error) => console.error('Error fetching order details:', error));
   }, [orderId]);
 
   // 更新訂單狀態
   const updateOrderStatus = (newStatus) => {
-    axios.put(`/api/orders/${orderId}/status`, { status: newStatus })
-      .then(response => {
+    axiosInstance
+      .put(`/orders/${orderId}/status`, { status: newStatus })
+      .then((response) => {
         setOrderStatus(newStatus);
         // 通知 WebSocket 更新狀態
         socket.emit('orderStatusUpdate', { orderId, status: newStatus });
       })
-      .catch(error => console.error('Error updating order status:', error));
+      .catch((error) => console.error('Error updating order status:', error));
   };
 
   // 實時追蹤外送員位置 (假設已集成位置服務)
@@ -55,7 +58,9 @@ const DeliveryOrderStatus = ({ orderId }) => {
 
       {/* 配送中狀態更新按鈕 */}
       {orderStatus === 'pickedUp' && (
-        <button onClick={() => updateOrderStatus('outForDelivery')}>開始配送</button>
+        <button onClick={() => updateOrderStatus('outForDelivery')}>
+          開始配送
+        </button>
       )}
 
       {/* 送達狀態更新按鈕 */}
@@ -67,12 +72,16 @@ const DeliveryOrderStatus = ({ orderId }) => {
       {deliveryLocation && (
         <div>
           <h3>外送員位置：</h3>
-          <p>緯度: {deliveryLocation.lat}, 經度: {deliveryLocation.lng}</p>
+          <p>
+            緯度: {deliveryLocation.lat}, 經度: {deliveryLocation.lng}
+          </p>
         </div>
       )}
 
       {/* 聯繫用戶 */}
-      <button onClick={() => window.open(`tel:${order.customerPhone}`)}>聯繫用戶</button>
+      <button onClick={() => window.open(`tel:${order.customerPhone}`)}>
+        聯繫用戶
+      </button>
     </div>
   );
 };

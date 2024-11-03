@@ -1,3 +1,4 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/RestaurantHomePage/Support.js
 
 import React from 'react';
@@ -8,8 +9,12 @@ const Support = () => {
       <h2 className="text-xl font-bold mb-4">支持與幫助</h2>
       <div className="mb-6">
         <h3 className="text-lg font-semibold mb-2">技術支持聯繫</h3>
-        <p><strong>電話：</strong>123-456-7890</p>
-        <p><strong>電子郵件：</strong>support@restaurantapp.com</p>
+        <p>
+          <strong>電話：</strong>123-456-7890
+        </p>
+        <p>
+          <strong>電子郵件：</strong>support@restaurantapp.com
+        </p>
       </div>
       <div>
         <h3 className="text-lg font-semibold mb-2">常見問題解答（FAQ）</h3>
@@ -20,7 +25,9 @@ const Support = () => {
           </li>
           <li>
             <strong>如何查看銷售報表？</strong>
-            <p>前往「銷售數據與報表」部分，您可以查看每日、每週和每月的銷售數據。</p>
+            <p>
+              前往「銷售數據與報表」部分，您可以查看每日、每週和每月的銷售數據。
+            </p>
           </li>
           <li>
             <strong>如何添加新員工？</strong>

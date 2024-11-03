@@ -1,7 +1,8 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/UserHomePage/PaymentPage.js
 
 import React, { useState } from 'react';
-import axios from '../../utils/api';
+import axios from '@utils/api';
 
 const PaymentPage = () => {
   const [selectedPayment, setSelectedPayment] = useState('');

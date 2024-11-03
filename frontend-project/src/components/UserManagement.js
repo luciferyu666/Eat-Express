@@ -1,3 +1,4 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/UserManagement.js
 
 import React, { useEffect, useState } from 'react';
@@ -26,7 +27,11 @@ const UserManagement = () => {
     try {
       // 修改為完整的後端 URL，確保端口和路徑正確
       await axios.post(`http://localhost:5000/api/users/${userId}/disable`);
-      setUsers(users.map(user => user.id === userId ? { ...user, disabled: true } : user));
+      setUsers(
+        users.map((user) =>
+          user.id === userId ? { ...user, disabled: true } : user
+        )
+      );
     } catch (error) {
       console.error('禁用用戶失敗', error);
     }
@@ -47,7 +52,7 @@ const UserManagement = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map(user => (
+          {users.map((user) => (
             <tr key={user.id} className="text-center">
               <td className="py-2 px-4">{user.id}</td>
               <td className="py-2 px-4">{user.name}</td>
@@ -55,7 +60,9 @@ const UserManagement = () => {
               <td className="py-2 px-4">{user.disabled ? '禁用' : '正常'}</td>
               <td className="py-2 px-4">
                 <button
-                  className={`px-2 py-1 rounded ${user.disabled ? 'bg-gray-500' : 'bg-red-500 text-white'}`}
+                  className={`px-2 py-1 rounded ${
+                    user.disabled ? 'bg-gray-500' : 'bg-red-500 text-white'
+                  }`}
                   onClick={() => handleDisableUser(user.id)}
                   disabled={user.disabled}
                 >

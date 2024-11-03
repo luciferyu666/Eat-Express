@@ -1,3 +1,4 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/setupAxios.js
 import axios from 'axios';
 
@@ -8,12 +9,12 @@ const setupAxiosInterceptors = () => {
     (config) => {
       // 從 localStorage 中獲取 JWT Token
       const token = localStorage.getItem('authToken');
-      
+
       // 如果 Token 存在，將其添加到 Authorization 標頭
       if (token) {
         config.headers.Authorization = `Bearer ${token}`;
       }
-      
+
       return config;
     },
     (error) => {

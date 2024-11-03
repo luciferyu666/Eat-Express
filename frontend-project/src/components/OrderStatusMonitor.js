@@ -1,23 +1,27 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/OrderStatusMonitor.js
 
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance from 'axios';
 
 const OrderStatusMonitor = ({ filter, onFilterChange }) => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     // 從後端獲取活躍訂單
-    axios.get('/api/orders/active')
-      .then(response => setOrders(response.data))
-      .catch(error => console.error('Error fetching orders:', error));
+    axiosInstance
+      .get("/orders/active")
+      .then((response) => setOrders(response.data))
+      .catch((error) => console.error('Error fetching orders:', error));
   }, []);
 
   // 根據篩選條件過濾訂單
-  const filteredOrders = orders.filter(order => 
-    (!filter.restaurant || order.restaurantName.includes(filter.restaurant)) &&
-    (!filter.user || order.userName.includes(filter.user)) &&
-    (!filter.delivery || order.deliveryPersonName.includes(filter.delivery))
+  const filteredOrders = orders.filter(
+    (order) =>
+      (!filter.restaurant ||
+        order.restaurantName.includes(filter.restaurant)) &&
+      (!filter.user || order.userName.includes(filter.user)) &&
+      (!filter.delivery || order.deliveryPersonName.includes(filter.delivery))
   );
 
   return (
@@ -28,30 +32,30 @@ const OrderStatusMonitor = ({ filter, onFilterChange }) => {
       <div className="mb-4">
         <label className="mr-2">
           餐廳:
-          <input 
-            type="text" 
-            name="restaurant" 
-            value={filter.restaurant} 
+          <input
+            type="text"
+            name="restaurant"
+            value={filter.restaurant}
             onChange={onFilterChange}
             className="border rounded px-2 py-1 ml-1"
           />
         </label>
         <label className="mr-2">
           用戶:
-          <input 
-            type="text" 
-            name="user" 
-            value={filter.user} 
+          <input
+            type="text"
+            name="user"
+            value={filter.user}
             onChange={onFilterChange}
             className="border rounded px-2 py-1 ml-1"
           />
         </label>
         <label className="mr-2">
           外送員:
-          <input 
-            type="text" 
-            name="delivery" 
-            value={filter.delivery} 
+          <input
+            type="text"
+            name="delivery"
+            value={filter.delivery}
             onChange={onFilterChange}
             className="border rounded px-2 py-1 ml-1"
           />
@@ -71,7 +75,7 @@ const OrderStatusMonitor = ({ filter, onFilterChange }) => {
           </tr>
         </thead>
         <tbody>
-          {filteredOrders.map(order => (
+          {filteredOrders.map((order) => (
             <tr key={order.id} className="text-center">
               <td className="py-2 px-4">{order.id}</td>
               <td className="py-2 px-4">{order.userName}</td>
@@ -79,7 +83,9 @@ const OrderStatusMonitor = ({ filter, onFilterChange }) => {
               <td className="py-2 px-4">{order.deliveryPersonName}</td>
               <td className="py-2 px-4">{order.status}</td>
               <td className="py-2 px-4">
-                <button className="bg-blue-500 text-white px-2 py-1 rounded">查看詳情</button>
+                <button className="bg-blue-500 text-white px-2 py-1 rounded">
+                  查看詳情
+                </button>
               </td>
             </tr>
           ))}

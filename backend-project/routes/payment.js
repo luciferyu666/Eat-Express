@@ -5,9 +5,14 @@ const stripe = Stripe('YOUR_STRIPE_SECRET_KEY');  // 替換為您的 Stripe Secr
 
 // Stripe 支付意圖處理
 router.post('/create-payment-intent', async (req, res) => {
+  console.log('处理 POST /create-payment-intent 请求');
   const { amount } = req.body;
 
   try {
+    console.log("Entering routes\\payment.js");
+    console.log("Entering routes\\payment.js");
+    console.log("Entering routes\\payment.js");
+    console.log("Entering routes\\payment.js");
     const paymentIntent = await stripe.paymentIntents.create({
       amount,
       currency: 'usd',
@@ -24,9 +29,14 @@ router.post('/create-payment-intent', async (req, res) => {
 
 // Stripe 結帳會話處理
 router.post('/stripe', async (req, res) => {
+  console.log('处理 POST /stripe 请求');
   const { orderId, totalAmount } = req.body;
 
   try {
+    console.log("Entering routes\\payment.js");
+    console.log("Entering routes\\payment.js");
+    console.log("Entering routes\\payment.js");
+    console.log("Entering routes\\payment.js");
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [{

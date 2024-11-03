@@ -1,7 +1,8 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // frontend-project/src/components/AdminHomePage/DataReports.js
 
 import React, { useEffect, useState } from 'react';
-import api from '../../utils/api';
+import api from '@utils/api';
 import { Line, Bar, Pie } from 'react-chartjs-2';
 import { saveAs } from 'file-saver';
 import { Chart, registerables } from 'chart.js';
@@ -36,7 +37,9 @@ const DataReports = () => {
 
   const handleExport = async () => {
     try {
-      const response = await api.get(`/reports/export/${selectedReport}`, { responseType: 'blob' });
+      const response = await api.get(`/reports/export/${selectedReport}`, {
+        responseType: 'blob',
+      });
       const blob = new Blob([response.data], { type: 'application/pdf' });
       saveAs(blob, `${selectedReport}_report.pdf`);
     } catch (error) {
@@ -119,28 +122,36 @@ const DataReports = () => {
       <div className="mb-4 flex space-x-4">
         <button
           onClick={() => setSelectedReport('system')}
-          className={`px-4 py-2 rounded ${selectedReport === 'system' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+          className={`px-4 py-2 rounded ${
+            selectedReport === 'system'
+              ? 'bg-blue-500 text-white'
+              : 'bg-gray-200'
+          }`}
         >
           系統運營報表
         </button>
         <button
           onClick={() => setSelectedReport('user')}
-          className={`px-4 py-2 rounded ${selectedReport === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+          className={`px-4 py-2 rounded ${
+            selectedReport === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-200'
+          }`}
         >
           用戶行為分析
         </button>
         <button
           onClick={() => setSelectedReport('restaurant')}
-          className={`px-4 py-2 rounded ${selectedReport === 'restaurant' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+          className={`px-4 py-2 rounded ${
+            selectedReport === 'restaurant'
+              ? 'bg-blue-500 text-white'
+              : 'bg-gray-200'
+          }`}
         >
           餐廳表現分析
         </button>
       </div>
 
       {/* 報表內容 */}
-      <div className="w-full h-64">
-        {renderChart()}
-      </div>
+      <div className="w-full h-64">{renderChart()}</div>
 
       {/* 導出報表按鈕 */}
       <button

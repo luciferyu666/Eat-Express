@@ -1,27 +1,29 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance from 'axios';
 
 const MenuPage = ({ restaurantId }) => {
-  const [menu, setMenu] = useState([]);              // 菜單數據
-  const [cart, setCart] = useState([]);              // 購物車
-  const [selectedDish, setSelectedDish] = useState(null);  // 選中的菜品
-  const [quantity, setQuantity] = useState(1);       // 菜品數量
-  const [notes, setNotes] = useState('');            // 備註
+  const [menu, setMenu] = useState([]); // 菜單數據
+  const [cart, setCart] = useState([]); // 購物車
+  const [selectedDish, setSelectedDish] = useState(null); // 選中的菜品
+  const [quantity, setQuantity] = useState(1); // 菜品數量
+  const [notes, setNotes] = useState(''); // 備註
 
   // 獲取指定餐廳的菜單
   useEffect(() => {
-    axios.get(`/api/restaurants/${restaurantId}/menu`)
-      .then(response => setMenu(response.data))
-      .catch(error => console.error('Error fetching menu:', error));
+    axiosInstance
+      .get(`/restaurants/${restaurantId}/menu`)
+      .then((response) => setMenu(response.data))
+      .catch((error) => console.error('Error fetching menu:', error));
   }, [restaurantId]);
 
   // 添加菜品到購物車
   const addToCart = (dish) => {
     const updatedCart = [...cart, { ...dish, quantity, notes }];
     setCart(updatedCart);
-    setSelectedDish(null);  // 清空當前選中的菜品
-    setQuantity(1);         // 重置數量
-    setNotes('');           // 重置備註
+    setSelectedDish(null); // 清空當前選中的菜品
+    setQuantity(1); // 重置數量
+    setNotes(''); // 重置備註
   };
 
   // 移除購物車中的菜品
@@ -44,18 +46,24 @@ const MenuPage = ({ restaurantId }) => {
 
       {/* 顯示菜單，按類別分組 */}
       {menu.length > 0 ? (
-        menu.map(category => (
+        menu.map((category) => (
           <div key={category.name} className="menu-category">
             <h2>{category.name}</h2>
             <ul>
-              {category.items.map(dish => (
+              {category.items.map((dish) => (
                 <li key={dish.id} className="menu-item">
-                  <img src={dish.imageUrl} alt={dish.name} className="menu-item-image" />
+                  <img
+                    src={dish.imageUrl}
+                    alt={dish.name}
+                    className="menu-item-image"
+                  />
                   <div className="menu-item-details">
                     <h3>{dish.name}</h3>
                     <p>{dish.description}</p>
                     <p>價格: ${dish.price}</p>
-                    <button onClick={() => setSelectedDish(dish)}>加入購物車</button>
+                    <button onClick={() => setSelectedDish(dish)}>
+                      加入購物車
+                    </button>
                   </div>
                 </li>
               ))}
@@ -100,13 +108,23 @@ const MenuPage = ({ restaurantId }) => {
           <ul>
             {cart.map((item, index) => (
               <li key={index} className="cart-item">
-                <p>{item.name} - {item.quantity} 份</p>
-                <p>備註: {item.notes || "無"}</p>
+                <p>
+                  {item.name} - {item.quantity} 份
+                </p>
+                <p>備註: {item.notes || '無'}</p>
                 <p>總價: ${item.price * item.quantity}</p>
                 <button onClick={() => removeFromCart(index)}>移除</button>
-                <button onClick={() => updateCartQuantity(index, item.quantity + 1)}>增加數量</button>
+                <button
+                  onClick={() => updateCartQuantity(index, item.quantity + 1)}
+                >
+                  增加數量
+                </button>
                 {item.quantity > 1 && (
-                  <button onClick={() => updateCartQuantity(index, item.quantity - 1)}>減少數量</button>
+                  <button
+                    onClick={() => updateCartQuantity(index, item.quantity - 1)}
+                  >
+                    減少數量
+                  </button>
                 )}
               </li>
             ))}

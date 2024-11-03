@@ -4,6 +4,7 @@ const Order = require('../models/Order');  // 假設有一個訂單模型
 
 // 獲取銷售數據 API
 router.get('/', async (req, res) => {
+  console.log('处理 GET / 请求');
   const { range } = req.query;  // 獲取查詢參數
   let startDate;
   const today = new Date();
@@ -22,6 +23,10 @@ router.get('/', async (req, res) => {
   }
 
   try {
+    console.log("Entering routes\\salesRoutes.js");
+    console.log("Entering routes\\salesRoutes.js");
+    console.log("Entering routes\\salesRoutes.js");
+    console.log("Entering routes\\salesRoutes.js");
     // 查詢在特定時間範圍內的訂單
     const orders = await Order.find({ createdAt: { $gte: startDate } })
       .populate('items.dish', 'name price');  // 查詢訂單並填充菜品詳細數據
@@ -50,7 +55,7 @@ router.get('/', async (req, res) => {
 
     // 計算平均訂單金額
     const averageOrderValue = totalRevenue / totalOrders;
-    
+
     // 將菜品銷售數據轉換為數組格式
     const sales = Object.keys(dishSales).map(dishId => ({
       dishId,

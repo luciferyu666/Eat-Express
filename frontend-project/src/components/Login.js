@@ -1,3 +1,4 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/Login.js
 import React, { useState } from 'react';
 import axios from 'axios';
@@ -11,10 +12,13 @@ const Login = ({ onLoginSuccess }) => {
     e.preventDefault();
     try {
       // 向後端發送登入請求
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        'http://localhost:5000/api/auth/login',
+        {
+          email,
+          password,
+        }
+      );
 
       // 從後端返回的資料中取得 JWT token
       const { token } = response.data;

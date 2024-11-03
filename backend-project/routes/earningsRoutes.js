@@ -7,7 +7,12 @@ const path = require('path');
 
 // 獲取當日收益的 API
 router.get('/daily', async (req, res) => {
+  console.log('处理 GET /daily 请求');
   try {
+    console.log("Entering routes\\earningsRoutes.js");
+    console.log("Entering routes\\earningsRoutes.js");
+    console.log("Entering routes\\earningsRoutes.js");
+    console.log("Entering routes\\earningsRoutes.js");
     // 設置當天的時間範圍
     const startOfDay = new Date();
     startOfDay.setHours(0, 0, 0, 0);  // 當天開始時間
@@ -50,9 +55,14 @@ router.get('/daily', async (req, res) => {
 
 // 獲取歷史收益數據的 API
 router.get('/history', async (req, res) => {
+  console.log('处理 GET /history 请求');
   const { startDate, endDate } = req.query;
 
   try {
+    console.log("Entering routes\\earningsRoutes.js");
+    console.log("Entering routes\\earningsRoutes.js");
+    console.log("Entering routes\\earningsRoutes.js");
+    console.log("Entering routes\\earningsRoutes.js");
     const start = new Date(startDate);
     const end = new Date(endDate);
     end.setHours(23, 59, 59, 999);  // 設置結束時間
@@ -98,9 +108,14 @@ router.get('/history', async (req, res) => {
 
 // 導出收益報表的 API
 router.get('/export', async (req, res) => {
+  console.log('处理 GET /export 请求');
   const { startDate, endDate, format } = req.query;
 
   try {
+    console.log("Entering routes\\earningsRoutes.js");
+    console.log("Entering routes\\earningsRoutes.js");
+    console.log("Entering routes\\earningsRoutes.js");
+    console.log("Entering routes\\earningsRoutes.js");
     const start = new Date(startDate);
     const end = new Date(endDate);
     end.setHours(23, 59, 59, 999);  // 設置結束時間

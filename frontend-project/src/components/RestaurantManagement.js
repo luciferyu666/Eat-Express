@@ -1,3 +1,4 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/RestaurantManagement.js
 
 import React, { useEffect, useState } from 'react';
@@ -11,7 +12,9 @@ const RestaurantManagement = () => {
     const fetchRestaurants = async () => {
       try {
         // 修改為完整的後端 URL，確保端口和路徑正確
-        const response = await axios.get('http://localhost:5000/api/restaurants');
+        const response = await axios.get(
+          'http://localhost:5000/api/restaurants'
+        );
         setRestaurants(response.data);
       } catch (error) {
         console.error('獲取餐廳數據失敗', error);
@@ -31,8 +34,16 @@ const RestaurantManagement = () => {
     // 禁用餐廳的邏輯
     try {
       // 修改為完整的後端 URL，確保端口和路徑正確
-      await axios.post(`http://localhost:5000/api/restaurants/${restaurantId}/disable`);
-      setRestaurants(restaurants.map(restaurant => restaurant.id === restaurantId ? { ...restaurant, disabled: true } : restaurant));
+      await axios.post(
+        `http://localhost:5000/api/restaurants/${restaurantId}/disable`
+      );
+      setRestaurants(
+        restaurants.map((restaurant) =>
+          restaurant.id === restaurantId
+            ? { ...restaurant, disabled: true }
+            : restaurant
+        )
+      );
     } catch (error) {
       console.error('禁用餐廳失敗', error);
     }
@@ -53,12 +64,14 @@ const RestaurantManagement = () => {
           </tr>
         </thead>
         <tbody>
-          {restaurants.map(restaurant => (
+          {restaurants.map((restaurant) => (
             <tr key={restaurant.id} className="text-center">
               <td className="py-2 px-4">{restaurant.id}</td>
               <td className="py-2 px-4">{restaurant.name}</td>
               <td className="py-2 px-4">{restaurant.address}</td>
-              <td className="py-2 px-4">{restaurant.disabled ? '禁用' : '正常'}</td>
+              <td className="py-2 px-4">
+                {restaurant.disabled ? '禁用' : '正常'}
+              </td>
               <td className="py-2 px-4">
                 <button
                   className="bg-green-500 text-white px-2 py-1 rounded mr-2"
@@ -67,7 +80,11 @@ const RestaurantManagement = () => {
                   編輯
                 </button>
                 <button
-                  className={`px-2 py-1 rounded ${restaurant.disabled ? 'bg-gray-500' : 'bg-red-500 text-white'}`}
+                  className={`px-2 py-1 rounded ${
+                    restaurant.disabled
+                      ? 'bg-gray-500'
+                      : 'bg-red-500 text-white'
+                  }`}
                   onClick={() => handleDisableRestaurant(restaurant.id)}
                   disabled={restaurant.disabled}
                 >

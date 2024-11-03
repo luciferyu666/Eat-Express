@@ -1,7 +1,8 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // frontend-project/src/components/AdminHomePage/RestaurantManagement.js
 
 import React, { useEffect, useState } from 'react';
-import api from '../../utils/api';
+import api from '@utils/api';
 
 const RestaurantManagement = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -54,12 +55,14 @@ const RestaurantManagement = () => {
           </tr>
         </thead>
         <tbody>
-          {restaurants.map(restaurant => (
+          {restaurants.map((restaurant) => (
             <tr key={restaurant.id} className="text-center border-t">
               <td className="px-4 py-2">{restaurant.id}</td>
               <td className="px-4 py-2">{restaurant.name}</td>
               <td className="px-4 py-2">{restaurant.address}</td>
-              <td className="px-4 py-2">{restaurant.isActive ? '活躍' : '禁用'}</td>
+              <td className="px-4 py-2">
+                {restaurant.isActive ? '活躍' : '禁用'}
+              </td>
               <td className="px-4 py-2">
                 {restaurant.isActive ? (
                   <button

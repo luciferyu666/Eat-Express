@@ -1,6 +1,7 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/utils/orderApi.js
 
-import api from './api';
+import api from '@utils/api';
 
 // 創建訂單
 export const createOrder = async (orderData) => {

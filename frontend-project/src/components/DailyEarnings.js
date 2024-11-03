@@ -1,14 +1,16 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/DailyEarnings.js
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance from 'axios';
 
 const DailyEarnings = () => {
   const [earnings, setEarnings] = useState(null);
 
   useEffect(() => {
-    axios.get('/api/delivery/earnings/daily')
-      .then(response => setEarnings(response.data))
-      .catch(error => console.error('Error fetching earnings:', error));
+    axiosInstance
+      .get("/delivery/earnings/daily")
+      .then((response) => setEarnings(response.data))
+      .catch((error) => console.error('Error fetching earnings:', error));
   }, []);
 
   return (

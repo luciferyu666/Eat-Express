@@ -1,16 +1,18 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const RestaurantMenuPage = () => {
-  const [menu, setMenu] = useState([]);         // 菜單列表
-  const [newDish, setNewDish] = useState({      // 新增菜品信息
+  const [menu, setMenu] = useState([]); // 菜單列表
+  const [newDish, setNewDish] = useState({
+    // 新增菜品信息
     name: '',
     price: '',
     description: '',
     category: '',
     imageUrl: '',
   });
-  const [editingDish, setEditingDish] = useState(null);  // 編輯中的菜品
+  const [editingDish, setEditingDish] = useState(null); // 編輯中的菜品
 
   // 獲取餐廳菜單
   useEffect(() => {
@@ -19,7 +21,7 @@ const RestaurantMenuPage = () => {
 
   const fetchMenu = async () => {
     try {
-      const response = await axios.get('/api/menu');
+      const response = await axios.get("/menu");
       setMenu(response.data);
     } catch (error) {
       console.error('Error fetching menu:', error);
@@ -29,9 +31,15 @@ const RestaurantMenuPage = () => {
   // 添加新菜品
   const handleAddDish = async () => {
     try {
-      const response = await axios.post('/api/menu', newDish);
+      const response = await axios.post("/menu", newDish);
       setMenu([...menu, response.data]);
-      setNewDish({ name: '', price: '', description: '', category: '', imageUrl: '' });
+      setNewDish({
+        name: '',
+        price: '',
+        description: '',
+        category: '',
+        imageUrl: '',
+      });
     } catch (error) {
       console.error('Error adding dish:', error);
     }
@@ -40,9 +48,16 @@ const RestaurantMenuPage = () => {
   // 編輯菜品
   const handleEditDish = async () => {
     try {
-      const response = await axios.put(`/api/menu/${editingDish._id}`, editingDish);
-      setMenu(menu.map(dish => (dish._id === editingDish._id ? response.data : dish)));
-      setEditingDish(null);  // 完成編輯
+      const response = await axios.put(
+        `/menu/${editingDish._id}`,
+        editingDish
+      );
+      setMenu(
+        menu.map((dish) =>
+          dish._id === editingDish._id ? response.data : dish
+        )
+      );
+      setEditingDish(null); // 完成編輯
     } catch (error) {
       console.error('Error editing dish:', error);
     }
@@ -51,8 +66,8 @@ const RestaurantMenuPage = () => {
   // 刪除菜品
   const handleDeleteDish = async (dishId) => {
     try {
-      await axios.delete(`/api/menu/${dishId}`);
-      setMenu(menu.filter(dish => dish._id !== dishId));
+      await axios.delete(`/menu/${dishId}`);
+      setMenu(menu.filter((dish) => dish._id !== dishId));
     } catch (error) {
       console.error('Error deleting dish:', error);
     }
@@ -74,30 +89,32 @@ const RestaurantMenuPage = () => {
           type="text"
           placeholder="菜品名稱"
           value={newDish.name}
-          onChange={e => setNewDish({ ...newDish, name: e.target.value })}
+          onChange={(e) => setNewDish({ ...newDish, name: e.target.value })}
         />
         <input
           type="number"
           placeholder="價格"
           value={newDish.price}
-          onChange={e => setNewDish({ ...newDish, price: e.target.value })}
+          onChange={(e) => setNewDish({ ...newDish, price: e.target.value })}
         />
         <textarea
           placeholder="描述"
           value={newDish.description}
-          onChange={e => setNewDish({ ...newDish, description: e.target.value })}
+          onChange={(e) =>
+            setNewDish({ ...newDish, description: e.target.value })
+          }
         />
         <input
           type="text"
           placeholder="類別"
           value={newDish.category}
-          onChange={e => setNewDish({ ...newDish, category: e.target.value })}
+          onChange={(e) => setNewDish({ ...newDish, category: e.target.value })}
         />
         <input
           type="text"
           placeholder="圖片 URL"
           value={newDish.imageUrl}
-          onChange={e => setNewDish({ ...newDish, imageUrl: e.target.value })}
+          onChange={(e) => setNewDish({ ...newDish, imageUrl: e.target.value })}
         />
         <button onClick={handleAddDish}>添加菜品</button>
       </div>
@@ -106,9 +123,11 @@ const RestaurantMenuPage = () => {
       <div className="menu-list">
         <h2>當前菜單</h2>
         <ul>
-          {menu.map(dish => (
+          {menu.map((dish) => (
             <li key={dish._id}>
-              <span>{dish.name} - ${dish.price}</span>
+              <span>
+                {dish.name} - ${dish.price}
+              </span>
               <button onClick={() => startEditingDish(dish)}>編輯</button>
               <button onClick={() => handleDeleteDish(dish._id)}>刪除</button>
             </li>
@@ -124,30 +143,40 @@ const RestaurantMenuPage = () => {
             type="text"
             placeholder="菜品名稱"
             value={editingDish.name}
-            onChange={e => setEditingDish({ ...editingDish, name: e.target.value })}
+            onChange={(e) =>
+              setEditingDish({ ...editingDish, name: e.target.value })
+            }
           />
           <input
             type="number"
             placeholder="價格"
             value={editingDish.price}
-            onChange={e => setEditingDish({ ...editingDish, price: e.target.value })}
+            onChange={(e) =>
+              setEditingDish({ ...editingDish, price: e.target.value })
+            }
           />
           <textarea
             placeholder="描述"
             value={editingDish.description}
-            onChange={e => setEditingDish({ ...editingDish, description: e.target.value })}
+            onChange={(e) =>
+              setEditingDish({ ...editingDish, description: e.target.value })
+            }
           />
           <input
             type="text"
             placeholder="類別"
             value={editingDish.category}
-            onChange={e => setEditingDish({ ...editingDish, category: e.target.value })}
+            onChange={(e) =>
+              setEditingDish({ ...editingDish, category: e.target.value })
+            }
           />
           <input
             type="text"
             placeholder="圖片 URL"
             value={editingDish.imageUrl}
-            onChange={e => setEditingDish({ ...editingDish, imageUrl: e.target.value })}
+            onChange={(e) =>
+              setEditingDish({ ...editingDish, imageUrl: e.target.value })
+            }
           />
           <button onClick={handleEditDish}>保存修改</button>
         </div>

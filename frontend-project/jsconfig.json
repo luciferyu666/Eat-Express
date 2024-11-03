@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "baseUrl": "src",
+      "paths": {
+        "@shared/*": ["shared/*"],
+        "@utils/*": ["utils/*"],
+        "@components/*": ["components/*"],
+        "@constants/*": ["constants/*"],
+        "@context/*": ["context/*"],
+        "@sockets/*": ["sockets/*"],
+        "@services/*": ["services/*"],
+        "@types/*": ["types/*"],
+        "@hooks/*": ["hooks/*"],
+        "@api/*": ["api/*"],
+        "@pages/*": ["pages/*"],
+        "@features/*": ["features/*"]
+      }
+    },
+    "include": ["src", "../backend-project/scripts/add-logs.js"]
+  }

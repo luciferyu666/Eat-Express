@@ -1,3 +1,4 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 import { render, screen } from '@testing-library/react';
 import App from './App';
 

@@ -1,20 +1,24 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 import React, { useState } from 'react';
 import axios from 'axios';
-import { loadStripe } from '@stripe/stripe-js';  // Stripe 支付
-import PayPalButton from './PayPalButton';  // 引入 PayPal 支付按鈕
+import { loadStripe } from '@stripe/stripe-js'; // Stripe 支付
+import PayPalButton from '@pages/PayPalButton'; // 引入 PayPal 支付按鈕
 
 const stripePromise = loadStripe('YOUR_STRIPE_PUBLIC_KEY');
 
 const PaymentPage = ({ orderId, totalAmount }) => {
-  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');  // 支付方式
-  const [isProcessing, setIsProcessing] = useState(false);  // 支付處理狀態
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(''); // 支付方式
+  const [isProcessing, setIsProcessing] = useState(false); // 支付處理狀態
 
   // Stripe 支付處理邏輯
   const handleStripePayment = async () => {
     setIsProcessing(true);
     try {
       const stripe = await stripePromise;
-      const response = await axios.post('/api/payment/stripe', { orderId, totalAmount });
+      const response = await axios.post("/payment/stripe", {
+        orderId,
+        totalAmount,
+      });
       const session = response.data;
 
       // 跳轉到 Stripe 結帳頁面

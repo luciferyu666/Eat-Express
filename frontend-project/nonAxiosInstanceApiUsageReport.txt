@@ -1,0 +1,1609 @@
+﻿Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\App.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.488seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\App.test.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.446seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\i18n.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.455seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\reportWebVitals.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.448seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\setupAxios.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.451seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\setupProxy.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.441seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\setupTests.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.426seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\store.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.442seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\api\index.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.433seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\AdminLogin.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.493seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\AdminNavigation.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.490seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\AdminRegister.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.497seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\AnotherChartComponent.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.482seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\ChartComponent.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.451seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DailyEarnings.js | Line: 9 | Method: get | "/delivery/earnings/daily"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DailyEarnings.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.476seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryLocationMonitor.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.475seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryLogin.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.502seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryPersonLocationMonitor.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.448seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryPersonManagement.js | Line: 10 | Method: get | "/delivery-person"
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryPersonManagement.js | Line: 23 | Method: put | "/delivery-person/"
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryPersonManagement.js | Line: 36 | Method: put | "/delivery-person//disable"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryPersonManagement.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.470seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryRegister.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.545seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\Earnings.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.496seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\Login.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.518seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\LogoutButton.js | Line: 20 | Method: post | "/auth/logout"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\LogoutButton.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.485seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\MenuPage.js | Line: 12 | Method: get | "/restaurants//menu"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\MenuPage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.451seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\NavigationBar.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.446seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\OperationalStatusMonitor.js | Line: 17 | Method: get | "/restaurants/active"
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\OperationalStatusMonitor.js | Line: 18 | Method: get | "/delivery-person/active"
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\OperationalStatusMonitor.js | Line: 19 | Method: get | "/users/active"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\OperationalStatusMonitor.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.468seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\OrderForm.js | Line: 46 | Method: post | "/orders/create"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\OrderForm.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.489seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\OrderPage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.450seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\OrderStatusMonitor.js | Line: 11 | Method: get | "/orders/active"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\OrderStatusMonitor.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.497seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\ProtectedRoute.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.460seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantLogin.js | Line: 31 | Method: post | "/auth/login"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantLogin.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.491seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantManagement.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.466seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantPerformanceAnalysis.js | Line: 22 | Method: get | "/reports/restaurant-performance"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantPerformanceAnalysis.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.453seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantRegister.js | Line: 110 | Method: post | "/auth/register/restaurant"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantRegister.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.485seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\SomeComponent.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.483seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\SystemMonitor.js | Line: 13 | Method: get | "/system-status"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\SystemMonitor.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.453seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\SystemOperationReports.js | Line: 23 | Method: get | "/reports/system-operation"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\SystemOperationReports.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.469seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserBehaviorAnalysis.js | Line: 22 | Method: get | "/reports/user-behavior"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserBehaviorAnalysis.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.455seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserLogin.js | Line: 80 | Method: post | "/auth/login"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserLogin.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.461seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserManagement.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.454seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserRegister.js | Line: 16 | Method: post | "/auth/register"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserRegister.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.465seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\AdminHomePage\DataReports.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.468seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\AdminHomePage\DeliveryLocationMonitor.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.452seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\AdminHomePage\OperationalStatusMonitor.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.446seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\AdminHomePage\OrderStatusMonitor.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.444seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\AdminHomePage\RestaurantManagement.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.444seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\AdminHomePage\SystemMonitoring.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.457seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\AdminHomePage\UserManagement.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.444seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\common\NotAuthorized.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.446seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryHome\CurrentOrders.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.453seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryHome\EarningsHistory.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.486seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryHome\MapComponent.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.468seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryHome\Navigation.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.457seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryHome\Notifications.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.448seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryHome\OrderStatusUpdater.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.463seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryHome\Profile.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.463seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryHome\StatusToggle.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.465seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\DeliveryHome\Support.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.470seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantHomePage\BusinessStatus.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.453seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantHomePage\EmployeeManagement.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.452seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantHomePage\MenuManagement.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.477seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantHomePage\Notifications.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.437seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantHomePage\OrderDetail.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.435seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantHomePage\OrderManagement.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.443seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantHomePage\RestaurantInfo.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.460seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantHomePage\SalesReports.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.465seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\RestaurantHomePage\Support.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.439seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserHomePage\MenuBrowser.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.470seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserHomePage\NearbyRestaurants.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.452seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserHomePage\OrderTracking.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.449seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserHomePage\PaymentPage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.470seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserHomePage\PersonalizedRecommendations.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.445seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserHomePage\PopularDishes.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.440seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserHomePage\SearchBar.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.446seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\components\UserHomePage\ShoppingCart.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.451seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\constants\apiConstants.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.420seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\constants\apiPaths.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.435seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\constants\index.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.416seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\constants\roles.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.441seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\constants\userRoles.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.442seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\features\userSlice.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.435seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\hooks\useAuth.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.443seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\hooks\useSocket.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.452seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\AdminHomePage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.491seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\AdminHomePage_.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.436seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\AdminPage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.432seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\DeliveryDashboard_.js | Line: 17 | Method: get | "/delivery/orders"
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\DeliveryDashboard_.js | Line: 51 | Method: put | "/delivery/orders//accept"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\DeliveryDashboard_.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.456seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\DeliveryHomePage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.444seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\DeliveryOrderStatus.js | Line: 11 | Method: get | "/orders/"
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\DeliveryOrderStatus.js | Line: 19 | Method: put | "/orders//status"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\DeliveryOrderStatus.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.451seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\DeliveryPage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.441seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\HomePage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.437seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\MenuPage.js | Line: 13 | Method: get | "/restaurants//menu"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\MenuPage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.469seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\NotFound.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.442seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\OrderTrackingPage.js | Line: 15 | Method: get | "/orders/"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\OrderTrackingPage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.449seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\PaymentPage.js | Line: 17 | Method: post | "/payment/stripe"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\PaymentPage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.444seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\PayPalButton.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.446seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\RestaurantHomePage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.443seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\RestaurantMenuPage.js | Line: 23 | Method: get | "/menu"
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\RestaurantMenuPage.js | Line: 33 | Method: post | "/menu"
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\RestaurantMenuPage.js | Line: 50 | Method: put | "/menu/"
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\RestaurantMenuPage.js | Line: 68 | Method: delete | "/menu/"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\RestaurantMenuPage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.463seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\RestaurantOrderPage.js | Line: 11 | Method: get | "/orders"
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\RestaurantOrderPage.js | Line: 36 | Method: put | "/orders//status"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\RestaurantOrderPage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.453seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\RestaurantPage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.433seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\SalesReportPage.js | Line: 19 | Method: get | "/sales?range="
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\SalesReportPage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.446seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\UserHomePage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.457seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\pages\UserPage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.425seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\routes\AdminRoutes.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.451seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\routes\DeliveryRoutes.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.437seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\routes\RestaurantRoutes.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.450seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\routes\UserRoutes.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.444seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\findApiPrefix.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.444seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\findLoggerImports.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.440seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\findNonAxiosInstanceApiUsage.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.467seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\fix-roles-imports.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.449seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\fix-useAuth-import.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.445seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\fixImportsExports.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.446seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\remove-ts-types.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.437seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\removeApiPrefix.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.462seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\removeLogger.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.435seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\replaceAxiosWithInstance.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.505seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\updateAliases.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.450seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\updateConnectSocketImport.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.442seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\updateJwtDecodeImports.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.443seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\scripts\updateSharedImports.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.433seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\services\authService.js | Line: 15 | Method: post | "/auth/login"
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\services\authService.js | Line: 59 | Method: post | "/auth/register"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\services\authService.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.469seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\services\axiosConfig.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.443seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\services\deliveryService.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.444seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\services\socketService.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.451seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\services\__tests__\deliveryService.test.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.425seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\shared\roles.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.434seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\sockets\constants.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.423seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\sockets\index.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.479seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\sockets\schemas.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.489seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\sockets\events\joinOrderRoom.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.448seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\sockets\events\orderStatusUpdate.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.487seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\sockets\events\statusChange.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.504seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\types\User.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.445seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\utils\api.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.527seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\utils\apiPaths.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.458seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\utils\authUtils.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.451seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[findNonAxiosInstanceApiUsage] File: C:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\utils\axiosInstance.js | Line: 47 | Method: post | "/auth/refresh-token"
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\utils\axiosInstance.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.482seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\utils\constants.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.605seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\utils\logger.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.599seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\utils\orderApi.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.467seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\utils\socket.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.470seconds 
+Processing 1 files... 
+Spawning 1 workers...
+Sending 1 files to free worker...
+[43m[37m SKIP [39m[49mC:\Tasker\ΘúƒσôüσñûΘÇüτ│╗τ╡▒ΘûïτÖ╝\frontend-project\src\utils\socketEvents.js
+All done. 
+Results: 
+[31m0 errors
+[39m[33m0 unmodified
+[39m[33m1 skipped
+[39m[32m0 ok
+[39mTime elapsed: 0.444seconds 

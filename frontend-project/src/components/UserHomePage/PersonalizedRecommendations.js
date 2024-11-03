@@ -1,11 +1,12 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/components/UserHomePage/PersonalizedRecommendations.js
 
 import React, { useEffect, useState } from 'react';
-import axios from '../../utils/api';
+import axios from '@utils/api';
 
 const PersonalizedRecommendations = ({ userId }) => {
   const [recommendations, setRecommendations] = useState([]);
-  
+
   // 模擬數據
   const mockData = [
     {
@@ -67,7 +68,11 @@ const PersonalizedRecommendations = ({ userId }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {recommendations.map((dish) => (
           <div key={dish.id} className="border rounded p-2">
-            <img src={dish.image} alt={dish.name} className="w-full h-32 object-cover rounded" />
+            <img
+              src={dish.image}
+              alt={dish.name}
+              className="w-full h-32 object-cover rounded"
+            />
             <h3 className="text-lg font-semibold mt-2">{dish.name}</h3>
             <p>{dish.description}</p>
             <p className="font-bold">{`價格: $${dish.price}`}</p>

@@ -1,4 +1,6 @@
-// src/pages/NotFound.js
+import { storeAuthToken } from "@utils/tokenStorage";
+// frontend-project/src/pages/NotFound.js
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 

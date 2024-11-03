@@ -1,7 +1,7 @@
-// src/components/UserRegister.js
+import { storeAuthToken } from "@utils/tokenStorage";
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import axiosInstance from 'axios';
 
 function UserRegister() {
   const [email, setEmail] = useState('');
@@ -14,24 +14,25 @@ function UserRegister() {
     e.preventDefault();
 
     try {
-      // 發送註冊請求
-      const response = await axios.post('http://localhost:5000/api/auth/register', {
-        email,
-        password,
-        username,
-      });
+      const response = await axiosInstance.post(
+        `${process.env.REACT_APP_API_BASE_URL}/auth/register`,
+        {
+          email,
+          password,
+          username,
+        }
+      );
 
-      // 假設註冊成功後會自動登入，並返回 token
       const { token } = response.data;
-      localStorage.setItem('authToken', token); // 保存 token
-      navigate('/'); // 註冊成功後跳轉到首頁
+      localStorage.setItem('authToken', token);
+      navigate('/');
     } catch (error) {
       if (error.response && error.response.data && error.response.data.error) {
-        setErrorMessage(error.response.data.error); // 來自後端的錯誤消息
+        setErrorMessage(error.response.data.error);
       } else {
         setErrorMessage('註冊失敗，請檢查您的資料並重試');
       }
-      console.error('註冊失敗:', error); // 打印詳細錯誤信息到控制台
+      console.error('註冊失敗:', error);
     }
   };
 
@@ -39,7 +40,7 @@ function UserRegister() {
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h1 className="text-3xl font-bold text-center mb-6">用戶註冊</h1>
-        
+
         {errorMessage && (
           <div className="bg-red-100 text-red-700 p-3 rounded mb-4">
             {errorMessage}
@@ -48,7 +49,10 @@ function UserRegister() {
 
         <form onSubmit={handleRegister}>
           <div className="mb-4">
-            <label htmlFor="username" className="block text-gray-700 font-bold mb-2">
+            <label
+              htmlFor="username"
+              className="block text-gray-700 font-bold mb-2"
+            >
               用戶名
             </label>
             <input
@@ -63,7 +67,10 @@ function UserRegister() {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
+            <label
+              htmlFor="email"
+              className="block text-gray-700 font-bold mb-2"
+            >
               電子郵件
             </label>
             <input
@@ -78,7 +85,10 @@ function UserRegister() {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="password" className="block text-gray-700 font-bold mb-2">
+            <label
+              htmlFor="password"
+              className="block text-gray-700 font-bold mb-2"
+            >
               密碼
             </label>
             <input
@@ -101,7 +111,10 @@ function UserRegister() {
         </form>
 
         <p className="text-center mt-4">
-          已經有帳戶了嗎？ <a href="/user/login" className="text-blue-500 hover:underline">登入</a>
+          已經有帳戶了嗎？{' '}
+          <a href="/user/login" className="text-blue-500 hover:underline">
+            登入
+          </a>
         </p>
       </div>
     </div>

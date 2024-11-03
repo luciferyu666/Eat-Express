@@ -1,23 +1,28 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# 前端 .gitignore
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# 忽略 node_modules 目錄
+/frontend-project/node_modules
 
-# testing
-/coverage
+# 忽略 pnp 文件
+/frontend-project/.pnp
+/frontend-project/.pnp.js
 
-# production
-/build
+# 忽略測試覆蓋率
+/frontend-project/coverage/
 
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# 忽略生產環境構建文件
+/frontend-project/build/
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# 忽略操作系統生成的文件
+/frontend-project/.DS_Store
+
+# 忽略環境變數文件
+/frontend-project/.env.local
+/frontend-project/.env.development.local
+/frontend-project/.env.test.local
+/frontend-project/.env.production.local
+
+# 忽略調試日誌
+/frontend-project/npm-debug.log*
+/frontend-project/yarn-debug.log*
+/frontend-project/yarn-error.log*

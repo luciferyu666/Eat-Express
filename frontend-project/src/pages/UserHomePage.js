@@ -1,18 +1,19 @@
+import { storeAuthToken } from "@utils/tokenStorage";
 // src/pages/UserHomePage.js
 
 import React, { useEffect, useState } from 'react';
-import NearbyRestaurants from '../components/UserHomePage/NearbyRestaurants';
-import PopularDishes from '../components/UserHomePage/PopularDishes';
-import PersonalizedRecommendations from '../components/UserHomePage/PersonalizedRecommendations';
-import SearchBar from '../components/UserHomePage/SearchBar';
-import MenuBrowser from '../components/UserHomePage/MenuBrowser';
-import ShoppingCart from '../components/UserHomePage/ShoppingCart';
-import OrderTracking from '../components/UserHomePage/OrderTracking';
-import PaymentPage from '../components/UserHomePage/PaymentPage';
-import { getSocket, joinOrderRoom, leaveOrderRoom } from '../socket';
-import api from '../utils/api'; // 確保導入為 api
+import NearbyRestaurants from '@components/UserHomePage/NearbyRestaurants';
+import PopularDishes from '@components/UserHomePage/PopularDishes';
+import PersonalizedRecommendations from '@components/UserHomePage/PersonalizedRecommendations';
+import SearchBar from '@components/UserHomePage/SearchBar';
+import MenuBrowser from '@components/UserHomePage/MenuBrowser';
+import ShoppingCart from '@components/UserHomePage/ShoppingCart';
+import OrderTracking from '@components/UserHomePage/OrderTracking';
+import PaymentPage from '@components/UserHomePage/PaymentPage';
+import { getSocket, joinOrderRoom, leaveOrderRoom } from '@utils/socket';
+import api from '@utils/api'; // 確保導入為 api
 import { useNavigate } from 'react-router-dom'; // 新增導入
-import LogoutButton from '../components/LogoutButton'; // 引入 LogoutButton
+import LogoutButton from '@components/LogoutButton'; // 引入 LogoutButton
 
 const UserHomePage = () => {
   const [userLocation, setUserLocation] = useState(null);
@@ -22,7 +23,10 @@ const UserHomePage = () => {
   const navigate = useNavigate(); // 使用 useNavigate 鉤子
 
   const addToCart = (dish) => {
-    setCartItems((prevItems) => [...prevItems, { dish, quantity: 1, notes: '' }]); // 更新購物車
+    setCartItems((prevItems) => [
+      ...prevItems,
+      { dish, quantity: 1, notes: '' },
+    ]); // 更新購物車
     console.log('已加入購物車:', dish);
   };
 
@@ -59,7 +63,8 @@ const UserHomePage = () => {
           setSelectedOrder((prevOrder) => ({
             ...prevOrder,
             status: data.status,
-            deliveryLocation: data.deliveryLocation || prevOrder.deliveryLocation,
+            deliveryLocation:
+              data.deliveryLocation || prevOrder.deliveryLocation,
           }));
         }
       });
@@ -90,33 +95,58 @@ const UserHomePage = () => {
       <SearchBar />
       {/* 使用 LogoutButton 組件 */}
       <LogoutButton />
-      <div className="mt-4 flex flex-col space-y-4"> {/* 直列式布局 */}
+      <div className="mt-4 flex flex-col space-y-4">
+        {' '}
+        {/* 直列式布局 */}
         <div className="bg-white rounded-lg shadow-md p-4">
-          <h2 className="text-xl font-bold mb-2 text-center text-blue-600 underline">附近餐廳</h2> {/* 居中顯示並增加醒目效果 */}
+          <h2 className="text-xl font-bold mb-2 text-center text-blue-600 underline">
+            附近餐廳
+          </h2>{' '}
+          {/* 居中顯示並增加醒目效果 */}
           <NearbyRestaurants userLocation={userLocation} />
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
-          <h2 className="text-xl font-bold mb-2 text-center text-blue-600 underline">熱門菜品</h2> {/* 居中顯示並增加醒目效果 */}
+          <h2 className="text-xl font-bold mb-2 text-center text-blue-600 underline">
+            熱門菜品
+          </h2>{' '}
+          {/* 居中顯示並增加醒目效果 */}
           <PopularDishes addToCart={addToCart} /> {/* 傳遞 addToCart 函數 */}
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
-          <h2 className="text-xl font-bold mb-2 text-center text-blue-600 underline">個性化推薦</h2> {/* 居中顯示並增加醒目效果 */}
-          <PersonalizedRecommendations userId={localStorage.getItem('userId')} />
+          <h2 className="text-xl font-bold mb-2 text-center text-blue-600 underline">
+            個性化推薦
+          </h2>{' '}
+          {/* 居中顯示並增加醒目效果 */}
+          <PersonalizedRecommendations
+            userId={localStorage.getItem('userId')}
+          />
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
-          <h2 className="text-xl font-bold mb-2 text-center text-blue-600 underline">菜單瀏覽</h2> {/* 居中顯示並增加醒目效果 */}
+          <h2 className="text-xl font-bold mb-2 text-center text-blue-600 underline">
+            菜單瀏覽
+          </h2>{' '}
+          {/* 居中顯示並增加醒目效果 */}
           <MenuBrowser />
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
-          <h2 className="text-xl font-bold mb-2 text-center text-blue-600 underline">購物車</h2> {/* 居中顯示並增加醒目效果 */}
-          <ShoppingCart cartItems={cartItems} setCartItems={setCartItems} /> {/* 傳遞購物車項目 */}
+          <h2 className="text-xl font-bold mb-2 text-center text-blue-600 underline">
+            購物車
+          </h2>{' '}
+          {/* 居中顯示並增加醒目效果 */}
+          <ShoppingCart
+            cartItems={cartItems}
+            setCartItems={setCartItems}
+          />{' '}
+          {/* 傳遞購物車項目 */}
         </div>
       </div>
       {selectedOrder && (
         <OrderTracking order={selectedOrder} onClose={handleDeselectOrder} />
       )}
       <PaymentPage />
-      {locationError && <p className="text-red-500 mt-4">錯誤: {locationError}</p>}
+      {locationError && (
+        <p className="text-red-500 mt-4">錯誤: {locationError}</p>
+      )}
     </div>
   );
 };
